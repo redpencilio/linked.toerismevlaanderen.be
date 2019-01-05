@@ -281,8 +281,6 @@
                 (:thoroughfare :string ,(s-prefix "locn:thoroughfare"))
                 (:references :url ,(s-prefix "adres:verwijstNaar"))
                 (:full-address :language-string-set ,(s-prefix "locn:fullAddress")))
-  :has-many `(mu-resource-has-many)
-  :has-one `(mu-resource-has-one)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/addresses/")
   :on-path "addresses")
 
