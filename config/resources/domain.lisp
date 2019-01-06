@@ -334,7 +334,7 @@
 
 (define-resource point ()
   :class (s-prefix "wgs:Point")
-  :properties `((:latitude :dec ,(s-prefix "wgs:lat"))
+  :properties `((:latitude :number ,(s-prefix "wgs:lat"))
                 (:longitude :number ,(s-prefix "wgs:long")))
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/points/")
   :on-path "points")
