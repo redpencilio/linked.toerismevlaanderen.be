@@ -222,7 +222,7 @@
 
 (define-resource touristic-region ()
   :class (s-prefix "logies:ToeristischeRegio")
-  :properties `((:label :language-typed-string ,(s-prefix "skos:prefLabel")))
+  :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
   :has-many `((location :via ,(s-prefix "logies:bevatPlaats")
                         :as "contains-location"))
   :has-one `((geometry :via ,(s-prefix "locn:geometry")
