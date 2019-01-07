@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   frontend:
-    image: redpencilio/frontend-linked.toerismevlaanderen.be
+    image: redpencil/frontend-linked.toerismevlaanderen.be
     links:
       - identifier:backend
   identifier:
