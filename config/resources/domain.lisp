@@ -1,5 +1,10 @@
 (in-package :mu-cl-resources)
 
+(defparameter *include-count-in-paginated-responses* t
+  "when non-nil, all paginated listings will contain the number
+   of responses in the result object's meta.")
+(defparameter *max-group-sorted-properties* nil)
+
 ;;;;;;
 ;;;
 ;;; Classes specified in Logies AP
