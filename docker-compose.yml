@@ -1,6 +1,10 @@
 version: '3.4'
 
 services:
+  frontend:
+    image: redpencilio/frontend-linked.toerismevlaanderen.be
+    links:
+      - identifier:backend
   identifier:
     image: semtech/mu-identifier:1.5.0
   dispatcher:
