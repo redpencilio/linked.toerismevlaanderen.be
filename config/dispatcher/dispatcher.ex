@@ -23,97 +23,97 @@ defmodule Dispatcher do
   # end
 
   get "/agents/*path" do
-    Proxy.forward conn, path, "http://resource/agents/"
+    Proxy.forward conn, path, "http://cache/agents/"
   end
   get "/ratings/*path" do
-    Proxy.forward conn, path, "http://resource/ratings/"
+    Proxy.forward conn, path, "http://cache/ratings/"
   end
   get "/descriptions/*path" do
-    Proxy.forward conn, path, "http://resource/descriptions/"
+    Proxy.forward conn, path, "http://cache/descriptions/"
   end
   get "/creative-works/*path" do
-    Proxy.forward conn, path, "http://resource/creative-works/"
+    Proxy.forward conn, path, "http://cache/creative-works/"
   end
   get "/facilities/*path" do
-    Proxy.forward conn, path, "http://resource/facilities/"
+    Proxy.forward conn, path, "http://cache/facilities/"
   end
   get "/registered-organizations/*path" do
-    Proxy.forward conn, path, "http://resource/registered-organizations/"
+    Proxy.forward conn, path, "http://cache/registered-organizations/"
   end
   get "/quality-labels/*path" do
-    Proxy.forward conn, path, "http://resource/quality-labels/"
+    Proxy.forward conn, path, "http://cache/quality-labels/"
   end
   get "/lodgings/*path" do
-    Proxy.forward conn, path, "http://resource/lodgings/"
+    Proxy.forward conn, path, "http://cache/lodgings/"
   end
   get "/media-objects/*path" do
-    Proxy.forward conn, path, "http://resource/media-objects/"
+    Proxy.forward conn, path, "http://cache/media-objects/"
   end
   get "/registrations/*path" do
-    Proxy.forward conn, path, "http://resource/registrations/"
+    Proxy.forward conn, path, "http://cache/registrations/"
   end
   get "/rooms/*path" do
-    Proxy.forward conn, path, "http://resource/rooms/"
+    Proxy.forward conn, path, "http://cache/rooms/"
   end
   get "/touristic-regions/*path" do
-    Proxy.forward conn, path, "http://resource/touristic-regions/"
+    Proxy.forward conn, path, "http://cache/touristic-regions/"
   end
   get "/rental-units/*path" do
-    Proxy.forward conn, path, "http://resource/rental-units/"
+    Proxy.forward conn, path, "http://cache/rental-units/"
   end
   get "/locations/*path" do
-    Proxy.forward conn, path, "http://resource/locations/"
+    Proxy.forward conn, path, "http://cache/locations/"
   end
   get "/licenses/*path" do
-    Proxy.forward conn, path, "http://resource/licenses/"
+    Proxy.forward conn, path, "http://cache/licenses/"
   end
   get "/addresses/*path" do
-    Proxy.forward conn, path, "http://resource/addresses/"
+    Proxy.forward conn, path, "http://cache/addresses/"
   end
   get "/contact-points/*path" do
-    Proxy.forward conn, path, "http://resource/contact-points/"
+    Proxy.forward conn, path, "http://cache/contact-points/"
   end
   get "/geometries/*path" do
-    Proxy.forward conn, path, "http://resource/geometries/"
+    Proxy.forward conn, path, "http://cache/geometries/"
   end
   get "/identifiers/*path" do
-    Proxy.forward conn, path, "http://resource/identifiers/"
+    Proxy.forward conn, path, "http://cache/identifiers/"
   end
   get "/quantitative-values/*path" do
-    Proxy.forward conn, path, "http://resource/quantitative-values/"
+    Proxy.forward conn, path, "http://cache/quantitative-values/"
   end
   get "/locator-designators/*path" do
-    Proxy.forward conn, path, "http://resource/locator-designators/"
+    Proxy.forward conn, path, "http://cache/locator-designators/"
   end
   get "/points/*path" do
-    Proxy.forward conn, path, "http://resource/points/"
+    Proxy.forward conn, path, "http://cache/points/"
   end
   get "/generations/*path" do
-    Proxy.forward conn, path, "http://resource/generations/"
+    Proxy.forward conn, path, "http://cache/generations/"
   end
   get "/invalidations/*path" do
-    Proxy.forward conn, path, "http://resource/invalidations/"
+    Proxy.forward conn, path, "http://cache/invalidations/"
   end
   get "/standardized-units/*path" do
-    Proxy.forward conn, path, "http://resource/standardized-units/"
+    Proxy.forward conn, path, "http://cache/standardized-units/"
   end
   get "/audiences/*path" do
-    Proxy.forward conn, path, "http://resource/audiences/"
+    Proxy.forward conn, path, "http://cache/audiences/"
   end
   get "/languages/*path" do
-    Proxy.forward conn, path, "http://resource/languages/"
+    Proxy.forward conn, path, "http://cache/languages/"
   end
   get "/file-formats/*path" do
-    Proxy.forward conn, path, "http://resource/file-formats/"
+    Proxy.forward conn, path, "http://cache/file-formats/"
   end
   get "/locator-designator-types/*path" do
-    Proxy.forward conn, path, "http://resource/locator-designator-types/"
+    Proxy.forward conn, path, "http://cache/locator-designator-types/"
   end
   get "/registration-statuses/*path" do
-    Proxy.forward conn, path, "http://resource/registration-statuses/"
+    Proxy.forward conn, path, "http://cache/registration-statuses/"
   end
   get "/registration-lodging-types/*path" do
-    Proxy.forward conn, path, "http://resource/registration-lodging-types/"
+    Proxy.forward conn, path, "http://cache/registration-lodging-types/"
   end
 
   # Catch-all route
