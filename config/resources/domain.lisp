@@ -144,7 +144,7 @@
                        :as "welcome-addresses"))
   :has-one `((identifier :via ,(s-prefix "adms:identifier")
                          :as "identifier")
-             (geometry :via ,(s-prefix "logies:locatie")
+             (geometry :via ,(s-prefix "logies:onthaalLocatie")
                        :as "welcome-locations"))
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/lodgings/")
   :on-path "lodgings")
