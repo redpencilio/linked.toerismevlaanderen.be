@@ -17,6 +17,7 @@
 
 (define-resource agent ()
   :class (s-prefix "dct:Agent")
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/agents/")
   :on-path "agents")
 
@@ -29,6 +30,7 @@
                 (:issued-date :datetime ,(s-prefix "dct:issued")))
   :has-one `((registered-organization :via ,(s-prefix "schema:author")
                                       :as "author"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/ratings/")
   :on-path "ratings")
 
@@ -53,6 +55,7 @@
               (creative-work :via ,(s-prefix "schema:translationOfWork")
                              :inverse t
                              :as "translations"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/descriptions/")
   :on-path "descriptions")
 
@@ -76,6 +79,7 @@
               (creative-work :via ,(s-prefix "schema:translationOfWork")
                              :inverse t
                              :as "translations"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/creative-works/")
   :on-path "creative-works")
 
@@ -90,6 +94,7 @@
   :has-many `((facility :via ,(s-prefix "logies:isSpecialisatieVan")
                         :inverse t
                         :as "specialisations"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/facilities/")
   :on-path "facilities")
 
@@ -101,6 +106,7 @@
                 (:legal-status :url ,(s-prefix "organisatie:rechtstoestand")))
   :has-one `((registration :via ,(s-prefix "regorg:registration")
                            :as "registration"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked-toerismevlaanderen.be/id/registered-organizations/")
   :on-path "registered-organizations")
 
@@ -111,6 +117,7 @@
                 (:issued-date :datetime ,(s-prefix "dct:issued")))
   :has-one `((registered-organization :via ,(s-prefix "schema:author")
                                       :as "author"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/quality-labels/")
   :on-path "quality-labels")
 
@@ -150,6 +157,7 @@
                          :as "identifier")
              (geometry :via ,(s-prefix "logies:onthaalLocatie")
                        :as "welcome-locations"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/lodgings/")
   :on-path "lodgings")
 
@@ -188,6 +196,7 @@
                              :as "translations")
               (language :via ,(s-prefix "schema:inLanguage")
                         :as "languages"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/media-objects/")
   :on-path "media-objects")
 
@@ -206,6 +215,7 @@
              (registration-lodging-type :via ,(s-prefix "dct:type")
                                         :as "type"))
     ;;; TODO add 'verantwoordelijkeOrganisatie' ?
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registrations/")
   :on-path "registrations")
 
@@ -221,6 +231,7 @@
                           :as "rental-unit")
              (room-type :via ,(s-prefix "dct:type")
                         :as "type"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/rooms/")
   :on-path "rooms")
 
@@ -231,6 +242,7 @@
                         :as "contains-location"))
   :has-one `((geometry :via ,(s-prefix "locn:geometry")
                        :as "geometry"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/touristic-regions/")
   :on-path "touristic-regions")
 
@@ -247,6 +259,7 @@
                                   :as "capacities"))
   :has-one `((geometry :via ,(s-prefix "logies:locatie")
                        :as "location"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/rental-units/")
   :on-path "rental-units")
 
@@ -258,12 +271,14 @@
 
 (define-resource location ()
   :class (s-prefix "dct:Location")
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/locations/")
   :on-path "locations")
 
 
 (define-resource license ()
   :class (s-prefix "dct:LicenseDocument")
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/licenses/")
   :on-path "licenses")
 
@@ -290,6 +305,7 @@
                 (:thoroughfare :string ,(s-prefix "locn:thoroughfare"))
                 (:references :url ,(s-prefix "adres:verwijstNaar"))
                 (:full-address :language-string-set ,(s-prefix "locn:fullAddress")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/addresses/")
   :on-path "addresses")
 
@@ -303,6 +319,7 @@
                 (:telephone :string ,(s-prefix "schema:telephone")))
   ;;; TODO add openingsuren
   ;;; TOOD add uren beschikbaarheid
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/contact-points/")
   :on-path "contact-points")
 
@@ -310,6 +327,7 @@
   :class (s-prefix "locn:Geometry")
   :properties `((:as-gml :string ,(s-prefix "geosparql:asGML"))
                 (:as-wkt :string ,(s-prefix "geosparql:asWKT")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/geometries/")
   :on-path "geometries")
 
@@ -320,6 +338,7 @@
                 (:issued-date :datetime ,(s-prefix "dct:issued")))
   :has-one `((agent :via ,(s-prefix "dct:creator")
                     :as "creator"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/identifiers/")
   :on-path "identifiers")
 
@@ -329,6 +348,7 @@
                 (:value :number ,(s-prefix "schema:value")))
   :has-one `((standardized-unit :via ,(s-prefix "schema:unitCode")
                                 :as "standardized-unit"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/quatitative-values/")
   :on-path "quantitative-values")
 
@@ -338,6 +358,7 @@
   :properties `((:designator :string ,(s-prefix "adres:Locatieaanduiding.aanduiding")))
   :has-one `((locator-designator-type :via ,(s-prefix "adres:Locatieaanduiding.type")
                                       :as "type"))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/locator-designators/")
   :on-path "locator-designators")
 
@@ -345,6 +366,7 @@
   :class (s-prefix "wgs:Point")
   :properties `((:latitude :number ,(s-prefix "wgs:lat"))
                 (:longitude :number ,(s-prefix "wgs:long")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/points/")
   :on-path "points")
 
@@ -352,6 +374,7 @@
   :class (s-prefix "prov:Generation")
   :properties `((:timestamp :datetime ,(s-prefix "prov:atTime"))
                 (:activity :url ,(s-prefix "prov:activity")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/generations/")
   :on-path "generations")
 
@@ -359,6 +382,7 @@
   :class (s-prefix "prov:Invalidation")
   :properties `((:timestamp :datetime ,(s-prefix "prov:atTime"))
                 (:activity :url ,(s-prefix "prov:activity")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/invalidations/")
   :on-path "invalidations")
 
@@ -371,41 +395,48 @@
 (define-resource standardized-unit ()
   :class (s-prefix "ext:StandardizedUnit")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/standardized-units/")
   :on-path "standardized-units")
 
 (define-resource audience ()
   :class (s-prefix "ext:Audience")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/audiences/")
   :on-path "audiences")
 
 (define-resource language ()
   :class (s-prefix "ext:Language")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/languages/")
   :on-path "languages")
 
 (define-resource file-format ()
   :class (s-prefix "ext:FileFormat")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/file-formats/")
   :on-path "file-formats")
 
 (define-resource locator-designator-type ()
   :class (s-prefix "ext:LocatorDesignatorType")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue/")
   :on-path "locator-designator-types")
 
 (define-resource registration-status ()
   :class (s-prefix "ext:RegistrationStatus")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-statuses/")
   :on-path "registration-statuses")
 
 (define-resource registration-lodging-type ()
   :class (s-prefix "ext:RegistrationLodgingType")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-lodging-type/")
   :on-path "registration-lodging-types")
