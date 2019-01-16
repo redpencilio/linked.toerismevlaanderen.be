@@ -181,9 +181,9 @@
               (address :via ,(s-prefix "logies:onthaalAdres")
                        :as "welcome-addresses"))
   :has-one `((identifier :via ,(s-prefix "adms:identifier")
-                         :as "identifier"))
-             ;; (geometry :via ,(s-prefix "logies:onthaalLocatie")
-             ;;           :as "welcome-locations"))
+                         :as "identifier")
+             (point :via ,(s-prefix "logies:onthaalLocatie") ;; AP specifies locn:Geometry, but it's always a point in current data
+                    :as "welcome-locations"))
   :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/lodgings/")
   :on-path "lodgings")
@@ -436,8 +436,13 @@
 
 (define-resource point ()
   :class (s-prefix "wgs:Point")
-  :properties `((:latitude :number ,(s-prefix "wgs:lat"))
+  :properties `((:as-gml :string ,(s-prefix "geosparql:asGML")) ;; attribute of superclass locn:Geometry
+                (:as-wkt :string ,(s-prefix "geosparql:asWKT")) ;; attribute of superclass locn:Geometry
+                (:latitude :number ,(s-prefix "wgs:lat"))
                 (:longitude :number ,(s-prefix "wgs:long")))
+  :has-one `((lodging :via ,(s-prefix "logies:onthaalLocatie")
+                      :inverse t
+                      :as "is-welcome-address-of"))
   :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/points/")
   :on-path "points")
