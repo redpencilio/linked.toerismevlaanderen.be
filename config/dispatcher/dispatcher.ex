@@ -116,6 +116,17 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://cache/registration-lodging-types/"
   end
 
+  # Data dumps
+  get "/files/:id/download" do
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  get "/files/*path" do
+    Proxy.forward conn, path, "http://cache/files/"
+  end
+  get "/data-dumps/*path" do
+    Proxy.forward conn, path, "http://cache/data-dumps/"
+  end
+
   # Catch-all route
   match _ do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )

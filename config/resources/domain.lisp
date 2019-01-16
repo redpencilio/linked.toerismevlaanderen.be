@@ -10,3 +10,4 @@
 (defparameter *max-group-sorted-properties* nil)
 
 (read-domain-file "logies-application-profile-domain.lisp")
+(read-domain-file "data-dumps-domain.lisp")
