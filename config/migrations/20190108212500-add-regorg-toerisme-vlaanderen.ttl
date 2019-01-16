@@ -1,6 +1,0 @@
-@prefix regorg: <http://www.w3.org/ns/regorg#> .
-@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
-
-<http://data.vlaanderen.be/id/organisatie/OVO000034> a regorg:RegisteredOrganization ;
-    mu:uuid "OVO000034" ;
-    regorg:legalName "Toerisme Vlaanderen"@nl .
