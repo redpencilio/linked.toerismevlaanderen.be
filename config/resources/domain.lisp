@@ -525,10 +525,22 @@
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
   :has-one `((registration :via ,(s-prefix "dct:type")
                            :inverse t
-                           :as "registration"))
+                           :as "registration")
+             (registration-publication-lodging-type :via ,(s-prefix "skos:broadMatch")
+                           :as "registration-publication-types"))
+  :features '(include-uri)
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-publication-lodging-type/")
+  :on-path "registration-lodging-types")
+
+(define-resource registration-publication-lodging-type ()
+  :class (s-prefix "ext:RegistrationPublicationLodgingType")
+  :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :has-many `((registration-lodging-type :via ,(s-prefix "skos:broadMatch")
+                                         :inverse t
+                                         :as "registration-types"))
   :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-lodging-type/")
-  :on-path "registration-lodging-types")
+  :on-path "registration-publication-lodging-types")
 
 ;; (define-resource room-type ()
 ;;   :class (s-prefix "ext:RoomType")
