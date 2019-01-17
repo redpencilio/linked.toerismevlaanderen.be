@@ -516,9 +516,9 @@
                            :inverse t
                            :as "registration")
              (registration-publication-lodging-type :via ,(s-prefix "skos:broadMatch")
-                           :as "registration-publication-types"))
+                           :as "registration-publication-type"))
   :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-publication-lodging-type/")
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-lodging-type/")
   :on-path "registration-lodging-types")
 
 (define-resource registration-publication-lodging-type ()
@@ -528,7 +528,7 @@
                                          :inverse t
                                          :as "registration-types"))
   :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-lodging-type/")
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registration-publication-lodging-type/")
   :on-path "registration-publication-lodging-types")
 
 ;; (define-resource room-type ()
