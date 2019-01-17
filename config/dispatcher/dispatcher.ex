@@ -115,6 +115,9 @@ defmodule Dispatcher do
   get "/registration-lodging-types/*path" do
     Proxy.forward conn, path, "http://cache/registration-lodging-types/"
   end
+  get "/registration-publication-lodging-types/*path" do
+    Proxy.forward conn, path, "http://cache/registration-publication-lodging-types/"
+  end
 
   # Data dumps
   get "/files/:id/download" do
