@@ -26,8 +26,6 @@ services:
       - ./config/dispatcher:/config
   yasgui:
     image: erikap/yasgui
-    ports:
-      - "9999:80"
     environment:
       DEFAULT_SPARQL_ENDPOINT: "http://linked.toerismevlaanderen.be/sparql"
   sparql:
