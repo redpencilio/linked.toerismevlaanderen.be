@@ -5,6 +5,7 @@ services:
     image: redpencil/frontend-linked.toerismevlaanderen.be
     links:
       - identifier:backend
+      - yasgui:sparqlui
   openapi-ui-proxy:
     image: redpencil/openapi-ui-proxy
     links:
@@ -23,6 +24,18 @@ services:
     image: semtech/mu-dispatcher:1.1.2
     volumes:
       - ./config/dispatcher:/config
+  yasgui:
+    image: erikap/yasgui
+    ports:
+      - "9999:80"
+    environment:
+      DEFAULT_SPARQL_ENDPOINT: "http://linked.toerismevlaanderen.be/sparql"
+  sparql:
+    image: semtech/mu-authorization:0.2.0
+    environment:
+      MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
+    volumes:
+      - ./config/authorization:/config
   database:
     image: tenforce/virtuoso:1.3.2-virtuoso7.2.2
     environment:

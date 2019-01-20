@@ -22,6 +22,10 @@ defmodule Dispatcher do
   #   Proxy.forward conn, path, "http://resource/themes/"
   # end
 
+  match "/sparql/*path" do
+    Proxy.forward conn, path, "http://sparql:8890/sparql/"
+  end
+
   get "/agents/*path" do
     Proxy.forward conn, path, "http://cache/agents/"
   end
