@@ -12,6 +12,7 @@
 !/data/db/toLoad
 !/data/db/toLoad/*
 /data/files/*
+/data/input/*
 
 .DS_Store
 *~

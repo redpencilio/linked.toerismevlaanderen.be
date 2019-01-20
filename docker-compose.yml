@@ -51,6 +51,11 @@ services:
     image: semtech/mu-cl-resources:1.17.1
     volumes:
       - ./config/resources:/config
+  import:
+    image: redpencil/logies-data-converter-service
+    volumes:
+      - ./data/input:/input
+      - ./data/files:/output
   file:
     image: semtech/mu-file-service:3.1.0
     volumes:
