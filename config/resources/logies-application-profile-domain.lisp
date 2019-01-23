@@ -4,11 +4,11 @@
 ;;;
 ;;;;;;
 
-(define-resource agent ()
-  :class (s-prefix "dct:Agent")
-  :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/agents/")
-  :on-path "agents")
+;; (define-resource agent ()
+;;   :class (s-prefix "dct:Agent")
+;;   :features '(include-uri)
+;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/agents/")
+;;   :on-path "agents")
 
 (define-resource rating ()
   :class (s-prefix "schema:Rating")
@@ -115,7 +115,10 @@
                       :as "authored-ratings")
               (quality-label :via ,(s-prefix "schema:author")
                              :inverse t
-                             :as "authored-quality-labels"))
+                             :as "authored-quality-labels")
+              (identifier :via ,(s-prefix "dct:creator")
+                                       :inverse t
+                                       :as "issued-identifiers"))
   :features '(include-uri)
   :resource-base (s-url "http://linked-toerismevlaanderen.be/id/registered-organizations/")
   :on-path "registered-organizations")
@@ -382,7 +385,7 @@
   :properties `((:notation :string ,(s-prefix "skos:notation"))
                 (:issued-by :string ,(s-prefix "adms:schemaAgency")))
                 ;; (:issued-date :datetime ,(s-prefix "dct:issued")))
-  :has-one `((agent :via ,(s-prefix "dct:creator")
+  :has-one `((registered-organization :via ,(s-prefix "dct:creator") ;; AP defines superclass dct:Agent
                     :as "creator")
              (lodging :via ,(s-prefix "adms:identifier")
                       :inverse t
