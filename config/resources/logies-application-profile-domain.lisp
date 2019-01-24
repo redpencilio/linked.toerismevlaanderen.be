@@ -108,8 +108,8 @@
                 ;; (:legal-personality :url ,(s-prefix "organisatie:rechtspersoonlijkheid"))
                 ;; (:legal-form :url ,(s-prefix "organisatie:rechtsvorm"))
                 ;; (:legal-status :url ,(s-prefix "organisatie:rechtstoestand")))
-  :has-one `((registration :via ,(s-prefix "regorg:registration")
-                           :as "registration"))
+  :has-one `((identifier :via ,(s-prefix "regorg:registration")
+                         :as "registration"))
   :has-many `((rating :via ,(s-prefix "schema:author")
                       :inverse t
                       :as "authored-ratings")
@@ -117,8 +117,9 @@
                              :inverse t
                              :as "authored-quality-labels")
               (identifier :via ,(s-prefix "dct:creator")
-                                       :inverse t
-                                       :as "issued-identifiers"))
+                          :inverse t
+                          :as "issued-identifiers"))
+                  ;;; TODO add inverse of 'verantwoordelijkeOrganisatie' ?
   :features '(include-uri)
   :resource-base (s-url "http://linked-toerismevlaanderen.be/id/registered-organizations/")
   :on-path "registered-organizations")
