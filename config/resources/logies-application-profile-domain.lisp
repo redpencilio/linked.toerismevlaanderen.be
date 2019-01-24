@@ -337,9 +337,9 @@
                 ;; (:po-box :string ,(s-prefix "locn:poBox"))
                 (:post-code :string ,(s-prefix "locn:postCode"))
                 ;; (:post-name :string ,(s-prefix "locn:postName"))
-                (:thoroughfare :string ,(s-prefix "locn:thoroughfare"))
+                (:thoroughfare :string ,(s-prefix "locn:thoroughfare")))
                 ;; (:references :url ,(s-prefix "adres:verwijstNaar"))
-                (:full-address :language-string-set ,(s-prefix "locn:fullAddress")))
+                ;; (:full-address :language-string-set ,(s-prefix "locn:fullAddress"))
   :has-one `((lodging :via ,(s-prefix "logies:onthaalAdres")
                       :inverse t
                       :as "lodging"))
