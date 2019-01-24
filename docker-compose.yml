@@ -5,7 +5,6 @@ services:
     image: redpencil/frontend-linked.toerismevlaanderen.be
     links:
       - identifier:backend
-      - yasgui:sparqlui
   openapi-ui-proxy:
     image: redpencil/openapi-ui-proxy
     links:
