@@ -17,7 +17,7 @@
                 (:best-rating :string ,(s-prefix "schema:bestRating"))
                 (:worst-rating :string ,(s-prefix "schema:worstRating")))
                 ;; (:issued-date :datetime ,(s-prefix "dct:issued")))
-  :has-one `((registered-organization :via ,(s-prefix "schema:author")
+  :has-one `((registered-organization :via ,(s-prefix "ext:ratingAuthor") ;; subprop of schema:author
                                       :as "author")
              (lodging :via ,(s-prefix "schema:starRating")
                       :inverse t
@@ -110,10 +110,10 @@
                 ;; (:legal-status :url ,(s-prefix "organisatie:rechtstoestand")))
   :has-one `((identifier :via ,(s-prefix "regorg:registration")
                          :as "registration"))
-  :has-many `((rating :via ,(s-prefix "schema:author")
+  :has-many `((rating :via ,(s-prefix "ext:ratingAuthor") ;; subprop of schema:author
                       :inverse t
                       :as "authored-ratings")
-              (quality-label :via ,(s-prefix "schema:author")
+              (quality-label :via ,(s-prefix "ext:qualityLabelAuthor") ;; subprop of schema:author
                              :inverse t
                              :as "authored-quality-labels")
               (identifier :via ,(s-prefix "dct:creator")
@@ -129,7 +129,7 @@
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
                 ;; (:description :language-string-set ,(s-prefix "schema:description"))
                 ;; (:issued-date :datetime ,(s-prefix "dct:issued")))
-  :has-one `((registered-organization :via ,(s-prefix "schema:author")
+  :has-one `((registered-organization :via ,(s-prefix "ext:qualityLabelAuthor") ;; subprop of schema:author
                                       :as "author"))
   :has-many `((lodging :via ,(s-prefix "logies:heeftKwaliteitslabel")
                        :inverse t
