@@ -118,8 +118,10 @@
                              :as "authored-quality-labels")
               (identifier :via ,(s-prefix "dct:creator")
                           :inverse t
-                          :as "issued-identifiers"))
-                  ;;; TODO add inverse of 'verantwoordelijkeOrganisatie' ?
+                          :as "issued-identifiers")
+              (registration :via ,(s-prefix "logies:verantwoordelijkeOrganisatie")
+                            :inverse t
+                            :as "registrations"))
   :features '(include-uri)
   :resource-base (s-url "http://linked-toerismevlaanderen.be/id/registered-organizations/")
   :on-path "registered-organizations")
@@ -239,7 +241,9 @@
                                         :as "type")
              (lodging :via ,(s-prefix "logies:heeftRegistratie")
                       :inverse t
-                      :as "lodging"))
+                      :as "lodging")
+             (registered-organization :via ,(s-prefix "logies:verantwoordelijkeOrganisatie")
+                                      :as "responsible-organization"))
   ;; :has-many `((registration :via  ,(s-prefix "generiek:isTijdspecialisatieVan")
   ;;                           :inverse t
   ;;                           :as "specialisations-in-time"))
