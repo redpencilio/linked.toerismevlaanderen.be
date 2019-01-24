@@ -172,7 +172,7 @@
                              :as "contact-points")
               (address :via ,(s-prefix "logies:onthaalAdres")
                        :as "welcome-addresses"))
-  :has-one `((identifier :via ,(s-prefix "adms:identifier")
+  :has-one `((identifier :via ,(s-prefix "ext:lodgingIdentifier") ;; subprop of adms:identifier
                          :as "identifier")
              (point :via ,(s-prefix "logies:onthaalLocatie") ;; AP specifies locn:Geometry, but it's always a point in current data
                     :as "welcome-locations"))
@@ -230,7 +230,7 @@
              ;;             :as "generation")
              ;; (invalidation :via ,(s-prefix "prov:qualifiedInvalidation")
              ;;               :as "invalidation")
-             (identifier :via ,(s-prefix "adms:identifier")
+             (identifier :via ,(s-prefix "ext:registrationIdentifier") ;; subprop of adms:identifier
                          :as "identifier")
              (registration-status :via ,(s-prefix "logies:registratieStatus")
                                   :as "registration-status")
@@ -387,10 +387,10 @@
                 ;; (:issued-date :datetime ,(s-prefix "dct:issued")))
   :has-one `((registered-organization :via ,(s-prefix "dct:creator") ;; AP defines superclass dct:Agent
                     :as "creator")
-             (lodging :via ,(s-prefix "adms:identifier")
+             (lodging :via ,(s-prefix "ext:lodgingIdentifier") ;; subprop of adms:identifier
                       :inverse t
                       :as "lodging")
-             (registration :via ,(s-prefix "adms:identifier")
+             (registration :via ,(s-prefix "ext:registrationIdentifier") ;; subprop of adms:identifier
                            :inverse t
                            :as "registration"))
   :features '(include-uri)
