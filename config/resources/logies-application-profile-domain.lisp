@@ -497,6 +497,12 @@
   :class (s-prefix "skos:ConceptScheme")
   :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
   :features '(include-uri)
+  :has-many `((concept :via ,(s-prefix "skos:inScheme")
+                       :inverse t
+                       :as "concepts")
+              (concept :via ,(s-prefix "skos:topConceptOf")
+                       :inverse t
+                       :as "top-concepts"))
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/conceptschemes/")
   :on-path "conceptschemes")
 
