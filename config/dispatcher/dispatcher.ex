@@ -98,6 +98,12 @@ defmodule Dispatcher do
   # get "/invalidations/*path" do
   #   Proxy.forward conn, path, "http://cache/invalidations/"
   # end
+  get "/concepts/*path" do
+    Proxy.forward conn, path, "http://cache/concepts/"
+  end
+  get "/conceptschemes/*path" do
+    Proxy.forward conn, path, "http://cache/conceptschemes/"
+  end
   # get "/standardized-units/*path" do
   #   Proxy.forward conn, path, "http://cache/standardized-units/"
   # end
