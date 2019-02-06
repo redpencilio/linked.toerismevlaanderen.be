@@ -78,29 +78,29 @@
 ;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/creative-works/")
 ;;   :on-path "creative-works")
 
-;; (define-resource facility ()
-;;   :class (s-prefix "logies:Faciliteit")
-;;   :properties `((:valid-through :datetime ,(s-prefix "schema:validThrough"))
-;;                 (:valid-from :datetime ,(s-prefix "schema:validFrom"))
-;;                 (:description :language-string-set ,(s-prefix "schema:description"))
-;;                 (:name :language-string-set ,(s-prefix "schema:name")))
-;;   :has-one `((facility :via ,(s-prefix "logies:isSpecialisatieVan")
-;;                        :as "is-specialisation-of"))
-;;   :has-many `((facility :via ,(s-prefix "logies:isSpecialisatieVan")
-;;                         :inverse t
-;;                         :as "specialisations")
-;;               (lodging :via ,(s-prefix "schema:amenityFeature")
-;;                        :inverse t
-;;                        :as "lodgings")
-;;               (rental-unit :via ,(s-prefix "schema:amenityFeature")
-;;                            :inverse t
-;;                            :as "rental-units"))
-;;               ;; (room :via ,(s-prefix "schema:amenityFeature")
-;;               ;;       :inverse t
-;;               ;;       :as "rooms"))
-;;   :features '(include-uri)
-;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/facilities/")
-;;   :on-path "facilities")
+(define-resource facility ()
+  :class (s-prefix "logies:Faciliteit")
+  :properties `(;; (:valid-through :datetime ,(s-prefix "schema:validThrough"))
+                ;; (:valid-from :datetime ,(s-prefix "schema:validFrom"))
+                (:description :language-string-set ,(s-prefix "schema:description"))
+                (:name :language-string-set ,(s-prefix "schema:name")))
+  :has-one `((facility :via ,(s-prefix "logies:isSpecialisatieVan")
+                       :as "is-specialisation-of"))
+  :has-many `((facility :via ,(s-prefix "logies:isSpecialisatieVan")
+                        :inverse t
+                        :as "specialisations"))
+              ;; (lodging :via ,(s-prefix "schema:amenityFeature")
+              ;;          :inverse t
+              ;;          :as "lodgings")
+              ;; (rental-unit :via ,(s-prefix "schema:amenityFeature")
+              ;;              :inverse t
+              ;;              :as "rental-units")
+              ;; (room :via ,(s-prefix "schema:amenityFeature")
+              ;;       :inverse t
+              ;;       :as "rooms"))
+  :features '(include-uri)
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/facilities/")
+  :on-path "facilities")
 
 (define-resource registered-organization ()
   :class (s-prefix "regorg:RegisteredOrganization")

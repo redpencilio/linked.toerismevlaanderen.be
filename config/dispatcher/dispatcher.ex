@@ -38,9 +38,9 @@ defmodule Dispatcher do
   # get "/creative-works/*path" do
   #   Proxy.forward conn, path, "http://cache/creative-works/"
   # end
-  # get "/facilities/*path" do
-  #   Proxy.forward conn, path, "http://cache/facilities/"
-  # end
+  get "/facilities/*path" do
+    Proxy.forward conn, path, "http://cache/facilities/"
+  end
   get "/registered-organizations/*path" do
     Proxy.forward conn, path, "http://cache/registered-organizations/"
   end
