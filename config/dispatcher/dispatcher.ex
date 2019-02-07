@@ -26,6 +26,10 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://sparql:8890/sparql/"
   end
 
+  match "/id/*path" do
+    Proxy.forward conn, path, "http://cache/"
+  end
+
   # get "/agents/*path" do
   #   Proxy.forward conn, path, "http://cache/agents/"
   # end
