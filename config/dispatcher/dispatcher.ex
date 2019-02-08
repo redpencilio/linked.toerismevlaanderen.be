@@ -36,9 +36,9 @@ defmodule Dispatcher do
   get "/ratings/*path" do
     Proxy.forward conn, path, "http://cache/ratings/"
   end
-  # get "/descriptions/*path" do
-  #   Proxy.forward conn, path, "http://cache/descriptions/"
-  # end
+  get "/descriptions/*path" do
+    Proxy.forward conn, path, "http://cache/descriptions/"
+  end
   # get "/creative-works/*path" do
   #   Proxy.forward conn, path, "http://cache/creative-works/"
   # end
@@ -54,9 +54,9 @@ defmodule Dispatcher do
   get "/lodgings/*path" do
     Proxy.forward conn, path, "http://cache/lodgings/"
   end
-  # get "/media-objects/*path" do
-  #   Proxy.forward conn, path, "http://cache/media-objects/"
-  # end
+  get "/media-objects/*path" do
+    Proxy.forward conn, path, "http://cache/media-objects/"
+  end
   get "/registrations/*path" do
     Proxy.forward conn, path, "http://cache/registrations/"
   end
