@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   frontend:
-    image: redpencil/frontend-linked.toerismevlaanderen.be
+    image: redpencil/frontend-linked.toerismevlaanderen.be:0.1.0
     links:
       - identifier:backend
   identifier:
@@ -33,7 +33,7 @@ services:
     volumes:
       - ./config/resources:/config
   import:
-    image: redpencil/logies-data-converter-service
+    image: redpencil/logies-data-converter-service:0.1.0
     volumes:
       - ./data/input:/input
       - ./data/files:/output
