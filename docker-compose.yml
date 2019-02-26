@@ -1,22 +1,37 @@
 version: '3.4'
 
+x-logging:
+  &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   frontend:
     image: redpencil/frontend-linked.toerismevlaanderen.be:0.1.0
     links:
       - identifier:backend
+    restart: always
+    logging: *default-logging
   identifier:
     image: semtech/mu-identifier:1.5.0
+    restart: always
+    logging: *default-logging
   dispatcher:
     image: semtech/mu-dispatcher:1.1.2
     volumes:
       - ./config/dispatcher:/config
+    restart: always
+    logging: *default-logging
   sparql:
     image: semtech/mu-authorization:0.2.0
     environment:
       MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
     volumes:
       - ./config/authorization:/config
+    restart: always
+    logging: *default-logging
   database:
     image: tenforce/virtuoso:1.3.2-virtuoso7.2.2
     environment:
@@ -24,20 +39,30 @@ services:
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
     volumes:
       - ./data/db:/data
+    restart: always
+    logging: *default-logging
   cache:
     image: semtech/mu-cache:0.6.0
     links:
       - resource:backend
+    restart: always
+    logging: *default-logging
   resource:
     image: semtech/mu-cl-resources:1.17.1
     volumes:
       - ./config/resources:/config
+    restart: always
+    logging: *default-logging
   import:
     image: redpencil/logies-data-converter-service:0.1.0
     volumes:
       - ./data/input:/input
       - ./data/files:/output
+    restart: always
+    logging: *default-logging
   file:
     image: semtech/mu-file-service:3.1.0
     volumes:
       - ./data/files:/share
+    restart: always
+    logging: *default-logging
