@@ -239,6 +239,8 @@
                       :as "registration-status")
              (concept :via ,(s-prefix "dct:type")
                       :as "type")
+             (concept :via ,(s-prefix "ext:tvlCategory")
+                      :as "category")
              (lodging :via ,(s-prefix "logies:heeftRegistratie")
                       :inverse t
                       :as "lodging")
