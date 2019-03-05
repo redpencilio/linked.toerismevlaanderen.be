@@ -54,7 +54,7 @@ services:
     restart: always
     logging: *default-logging
   import:
-    image: redpencil/logies-data-converter-service:0.1.0
+    image: redpencil/logies-data-converter-service:0.2.0
     volumes:
       - ./data/input:/input
       - ./data/files:/output
