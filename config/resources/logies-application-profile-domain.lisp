@@ -227,12 +227,12 @@
 
 (define-resource registration ()
   :class (s-prefix "logies:Registratie")
-  :has-one `(;; (registration :via ,(s-prefix "generiek:isTijdspecialisatieVan")
-             ;;              :as "is-specialisation-in-time-of")
-             ;; (generation :via ,(s-prefix "prov:qualifiedGeneration")
-             ;;             :as "generation")
-             ;; (invalidation :via ,(s-prefix "prov:qualifiedInvalidation")
-             ;;               :as "invalidation")
+  :has-one `((registration :via ,(s-prefix "generiek:isTijdspecialisatieVan")
+                          :as "is-specialisation-in-time-of")
+             (generation :via ,(s-prefix "prov:qualifiedGeneration")
+                         :as "generation")
+             (invalidation :via ,(s-prefix "prov:qualifiedInvalidation")
+                           :as "invalidation")
              (identifier :via ,(s-prefix "ext:registrationIdentifier") ;; subprop of adms:identifier
                          :as "identifier")
              (concept :via ,(s-prefix "logies:registratieStatus")
@@ -246,9 +246,9 @@
                       :as "lodging")
              (registered-organization :via ,(s-prefix "logies:verantwoordelijkeOrganisatie")
                                       :as "responsible-organization"))
-  ;; :has-many `((registration :via  ,(s-prefix "generiek:isTijdspecialisatieVan")
-  ;;                           :inverse t
-  ;;                           :as "specialisations-in-time"))
+  :has-many `((registration :via  ,(s-prefix "generiek:isTijdspecialisatieVan")
+                            :inverse t
+                            :as "specialisations-in-time"))
     ;;; TODO add 'verantwoordelijkeOrganisatie' ?
   :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registrations/")
@@ -446,27 +446,27 @@
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/points/")
   :on-path "points")
 
-;; (define-resource generation ()
-;;   :class (s-prefix "prov:Generation")
-;;   :properties `((:timestamp :datetime ,(s-prefix "prov:atTime"))
-;;                 (:activity :url ,(s-prefix "prov:activity")))
-;;   :has-one `((registration :via ,(s-prefix "prov:qualifiedGeneration")
-;;                            :inverse t
-;;                            :as "registration"))
-;;   :features '(include-uri)
-;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/generations/")
-;;   :on-path "generations")
+(define-resource generation ()
+  :class (s-prefix "prov:Generation")
+  :properties `((:timestamp :datetime ,(s-prefix "prov:atTime")))
+                ;;(:activity :url ,(s-prefix "prov:activity")))
+  :has-one `((registration :via ,(s-prefix "prov:qualifiedGeneration")
+                           :inverse t
+                           :as "registration"))
+  :features '(include-uri)
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/generations/")
+  :on-path "generations")
 
-;; (define-resource invalidation ()
-;;   :class (s-prefix "prov:Invalidation")
-;;   :properties `((:timestamp :datetime ,(s-prefix "prov:atTime"))
-;;                 (:activity :url ,(s-prefix "prov:activity")))
-;;   :has-one `((registration :via ,(s-prefix "prov:qualifiedInvalidation")
-;;                            :inverse t
-;;                            :as "registration"))
-;;   :features '(include-uri)
-;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/invalidations/")
-;;   :on-path "invalidations")
+(define-resource invalidation ()
+  :class (s-prefix "prov:Invalidation")
+  :properties `((:timestamp :datetime ,(s-prefix "prov:atTime")))
+                ;;(:activity :url ,(s-prefix "prov:activity")))
+  :has-one `((registration :via ,(s-prefix "prov:qualifiedInvalidation")
+                           :inverse t
+                           :as "registration"))
+  :features '(include-uri)
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/invalidations/")
+  :on-path "invalidations")
 
 ;;;;;;
 ;;;
