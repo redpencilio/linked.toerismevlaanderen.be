@@ -81,9 +81,9 @@ defmodule Dispatcher do
   get "/contact-points/*path" do
     Proxy.forward conn, path, "http://cache/contact-points/"
   end
-  # get "/geometries/*path" do
-  #   Proxy.forward conn, path, "http://cache/geometries/"
-  # end
+  get "/geometries/*path" do
+    Proxy.forward conn, path, "http://cache/geometries/"
+  end
   get "/identifiers/*path" do
     Proxy.forward conn, path, "http://cache/identifiers/"
   end
@@ -93,15 +93,6 @@ defmodule Dispatcher do
   # get "/locator-designators/*path" do
   #   Proxy.forward conn, path, "http://cache/locator-designators/"
   # end
-  get "/points/*path" do
-    Proxy.forward conn, path, "http://cache/points/"
-  end
-  get "/generations/*path" do
-    Proxy.forward conn, path, "http://cache/generations/"
-  end
-  get "/invalidations/*path" do
-    Proxy.forward conn, path, "http://cache/invalidations/"
-  end
   get "/concepts/*path" do
     Proxy.forward conn, path, "http://cache/concepts/"
   end

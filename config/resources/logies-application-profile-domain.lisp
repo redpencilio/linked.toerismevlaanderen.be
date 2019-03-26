@@ -148,7 +148,7 @@
                 (:number-of-rental-units :number ,(s-prefix "logies:aantalVerhuureenheden")))
   :has-one `((identifier :via ,(s-prefix "ext:lodgingIdentifier") ;; subprop of adms:identifier
                          :as "identifier")
-             (point :via ,(s-prefix "logies:onthaalLocatie") ;; AP specifies locn:Geometry, but it's always a point in current data
+             (geometry :via ,(s-prefix "logies:onthaalLocatie")
                     :as "welcome-location"))
   :has-many `((address :via ,(s-prefix "logies:onthaalAdres")
                        :as "welcome-addresses")
@@ -184,7 +184,7 @@
   :on-path "lodgings")
 
 (define-resource media-object ()
-  :class (s-prefix "logies:MediaObject")
+  :class (s-prefix "schema:MediaObject")
   :properties `((:content-url :url ,(s-prefix "schema:contentUrl")))
                 ;; (:modified-on :datetime ,(s-prefix "schema:dateModified"))
                 ;; (:name :language-string-set ,(s-prefix "schema:name"))
@@ -194,8 +194,8 @@
                 ;; (:exif-data :url ,(s-prefix "schema:exifDate"))
                 ;; (:thumbnail-url :url ,(s-prefix "schema:thumbnailUrl")))
   ;;; TODO add 'heeft_auteur ?
-  ;; :has-one `((creative-work :via ,(s-prefix "schema:exampleOfWork")
-  ;;                           :as "example-of")
+  ;; :has-one `((creative-work :via ,(s-prefix "schema:isBasedOn")
+  ;;                           :as "based-on")
   ;;            (creative-work :via ,(s-prefix "schema:translationOfWork")
   ;;                           :as "translation-of")
   ;;            (license :via ,(s-prefix "schema:license")
@@ -213,9 +213,9 @@
   :has-many `((lodging :via ,(s-prefix "logies:heeftMedia")
                        :inverse t
                        :as "lodgings"))
-              ;; (creative-work :via ,(s-prefix "schema:exampleOfWork")
+              ;; (creative-work :via ,(s-prefix "schema:isBasedOn")
               ;;                :inverse t
-              ;;                :as "examples")
+              ;;                :as "derivations")
               ;; (creative-work :via ,(s-prefix "schema:translationOfWork")
               ;;                :inverse t
               ;;                :as "translations")
@@ -227,13 +227,7 @@
 
 (define-resource registration ()
   :class (s-prefix "logies:Registratie")
-  :has-one `((registration :via ,(s-prefix "generiek:isTijdspecialisatieVan")
-                          :as "is-specialisation-in-time-of")
-             (generation :via ,(s-prefix "prov:qualifiedGeneration")
-                         :as "generation")
-             (invalidation :via ,(s-prefix "prov:qualifiedInvalidation")
-                           :as "invalidation")
-             (identifier :via ,(s-prefix "ext:registrationIdentifier") ;; subprop of adms:identifier
+  :has-one `((identifier :via ,(s-prefix "ext:registrationIdentifier") ;; subprop of adms:identifier
                          :as "identifier")
              (concept :via ,(s-prefix "logies:registratieStatus")
                       :as "registration-status")
@@ -246,10 +240,6 @@
                       :as "lodging")
              (registered-organization :via ,(s-prefix "logies:verantwoordelijkeOrganisatie")
                                       :as "responsible-organization"))
-  :has-many `((registration :via  ,(s-prefix "generiek:isTijdspecialisatieVan")
-                            :inverse t
-                            :as "specialisations-in-time"))
-    ;;; TODO add 'verantwoordelijkeOrganisatie' ?
   :features '(include-uri)
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/registrations/")
   :on-path "registrations")
@@ -272,7 +262,7 @@
 
 (define-resource touristic-region ()
   :class (s-prefix "logies:ToeristischeRegio")
-  :properties `((:label :language-string-set ,(s-prefix "skos:prefLabel")))
+  :properties `((:label :language-string-set ,(s-prefix "rdfs:label")))
   :has-many `((lodging :via ,(s-prefix "logies:behoortTotToeristischeRegio")
                        :inverse t
                        :as "contains-lodgings"))
@@ -370,22 +360,22 @@
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/contact-points/")
   :on-path "contact-points")
 
-;; (define-resource geometry ()
-;;   :class (s-prefix "locn:Geometry")
-;;   :properties `((:as-gml :string ,(s-prefix "geosparql:asGML"))
-;;                 (:as-wkt :string ,(s-prefix "geosparql:asWKT")))
-;;   :has-one `((lodging :via ,(s-prefix "logies:onthaalLocatie")
-;;                       :inverse t
-;;                       :as "is-welcome-address-of")
-;;              (media-object :via ,(s-prefix "logies:locatie")
-;;                            :inverse t
-;;                            :as "is-location-of")
-;;              (touristic-region :via ,(s-prefix "logies:locatie")
-;;                                :inverse t
-;;                                :as "touristic-region"))
-;;   :features '(include-uri)
-;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/geometries/")
-;;   :on-path "geometries")
+(define-resource geometry ()
+  :class (s-prefix "locn:Geometry")
+  :properties `((:as-gml :string ,(s-prefix "geosparql:asGML"))
+                (:as-wkt :string ,(s-prefix "geosparql:asWKT")))
+  :has-one `((lodging :via ,(s-prefix "logies:onthaalLocatie")
+                      :inverse t
+                      :as "is-welcome-address-of"))
+             ;; (media-object :via ,(s-prefix "logies:locatie")
+             ;;               :inverse t
+             ;;               :as "is-location-of")
+             ;; (touristic-region :via ,(s-prefix "logies:locatie")
+             ;;                   :inverse t
+             ;;                   :as "touristic-region"))
+  :features '(include-uri)
+  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/geometries/")
+  :on-path "geometries")
 
 (define-resource identifier ()
   :class (s-prefix "adms:Identifier")
@@ -432,41 +422,6 @@
 ;;   :features '(include-uri)
 ;;   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/locator-designators/")
 ;;   :on-path "locator-designators")
-
-(define-resource point ()
-  :class (s-prefix "wgs:Point")
-  :properties `((:as-gml :string ,(s-prefix "geosparql:asGML")) ;; attribute of superclass locn:Geometry
-                (:as-wkt :string ,(s-prefix "geosparql:asWKT")) ;; attribute of superclass locn:Geometry
-                (:latitude :number ,(s-prefix "wgs:lat"))
-                (:longitude :number ,(s-prefix "wgs:long")))
-  :has-one `((lodging :via ,(s-prefix "logies:onthaalLocatie")
-                      :inverse t
-                      :as "is-welcome-address-of"))
-  :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/points/")
-  :on-path "points")
-
-(define-resource generation ()
-  :class (s-prefix "prov:Generation")
-  :properties `((:timestamp :datetime ,(s-prefix "prov:atTime")))
-                ;;(:activity :url ,(s-prefix "prov:activity")))
-  :has-one `((registration :via ,(s-prefix "prov:qualifiedGeneration")
-                           :inverse t
-                           :as "registration"))
-  :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/generations/")
-  :on-path "generations")
-
-(define-resource invalidation ()
-  :class (s-prefix "prov:Invalidation")
-  :properties `((:timestamp :datetime ,(s-prefix "prov:atTime")))
-                ;;(:activity :url ,(s-prefix "prov:activity")))
-  :has-one `((registration :via ,(s-prefix "prov:qualifiedInvalidation")
-                           :inverse t
-                           :as "registration"))
-  :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/invalidations/")
-  :on-path "invalidations")
 
 ;;;;;;
 ;;;
