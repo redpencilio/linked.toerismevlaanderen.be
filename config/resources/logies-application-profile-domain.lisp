@@ -227,6 +227,7 @@
 
 (define-resource registration ()
   :class (s-prefix "logies:Registratie")
+  :properties `((:issued-date :datetime ,(s-prefix "dct:issued")))
   :has-one `((identifier :via ,(s-prefix "ext:registrationIdentifier") ;; subprop of adms:identifier
                          :as "identifier")
              (concept :via ,(s-prefix "logies:registratieStatus")
