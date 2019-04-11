@@ -9,7 +9,7 @@ x-logging:
 
 services:
   frontend:
-    image: redpencil/frontend-linked.toerismevlaanderen.be:0.4.1
+    image: redpencil/frontend-linked.toerismevlaanderen.be:0.4.2
     links:
       - identifier:backend
     restart: always
