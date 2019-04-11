@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Restart services
-$drc restart virtuoso resource import
+$drc restart database resource import
 
 # Cleanup output files
 ls -d -1tr $FILES_DIR | head -n -$KEEP_NB_OF_FILES | xargs -d '\n' rm -f
