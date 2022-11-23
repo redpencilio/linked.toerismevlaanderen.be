@@ -24,7 +24,7 @@ services:
       - ./config/dispatcher:/config
     restart: always
     logging: *default-logging
-  sparql:
+  database:
     image: semtech/mu-authorization:0.6.0-beta.7
     environment:
       MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
@@ -34,7 +34,7 @@ services:
       - ./config/authorization:/config
     restart: always
     logging: *default-logging
-  database:
+  triplestore:
     image: tenforce/virtuoso:1.3.2-virtuoso7.2.2
     environment:
       SPARQL_UPDATE: "true"
@@ -59,6 +59,8 @@ services:
     logging: *default-logging
   import:
     image: redpencil/logies-data-converter-service:0.4.3
+    links:
+      - triplestore:database
     volumes:
       - ./data/input:/input
       - ./data/files:/output
