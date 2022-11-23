@@ -1,142 +1,78 @@
 defmodule Dispatcher do
-  use Plug.Router
+  use Matcher
 
-  def start(_argv) do
-    port = 80
-    IO.puts "Starting Plug with Cowboy on port #{port}"
-    Plug.Adapters.Cowboy.http __MODULE__, [], port: port
-    :timer.sleep(:infinity)
-  end
+  define_accept_types [
+    json: [ "application/json", "application/vnd.api+json" ],
+    html: [ "text/html", "application/xhtml+html" ],
+    sparql: [ "application/sparql-results+json" ],
+    any: [ "*/*" ]
+  ]
 
-  plug Plug.Logger
-  plug :match
-  plug :dispatch
+  define_layers [ :static, :sparql, :resources, :api_services, :frontend_fallback, :not_found ]
 
-  # In order to forward the 'themes' resource to the
-  # resource service, use the following forward rule.
-  #
-  # docker-compose stop; docker-compose rm; docker-compose up
-  # after altering this file.
-  #
-  # match "/themes/*path" do
-  #   Proxy.forward conn, path, "http://resource/themes/"
-  # end
-
-  match "/sparql/*path" do
-    Proxy.forward conn, path, "http://sparql:8890/sparql/"
+  options "/*_path", _ do
+    conn
+    |> Plug.Conn.put_resp_header( "access-control-allow-headers", "content-type,accept" )
+    |> Plug.Conn.put_resp_header( "access-control-allow-methods", "*" )
+    |> send_resp( 200, "{ \"message\": \"ok\" }" )
   end
 
-  match "/id/*path" do
-    Proxy.forward conn, path, "http://cache/"
+  ###############
+  # STATIC
+  ###############
+  get "/assets/*path", %{ layer: :static } do
+    forward conn, path, "http://frontend/assets/"
   end
 
-  # get "/agents/*path" do
-  #   Proxy.forward conn, path, "http://cache/agents/"
-  # end
-  get "/ratings/*path" do
-    Proxy.forward conn, path, "http://cache/ratings/"
+  get "/index.html", %{ layer: :static } do
+    forward conn, [], "http://frontend/index.html"
   end
-  get "/descriptions/*path" do
-    Proxy.forward conn, path, "http://cache/descriptions/"
-  end
-  # get "/creative-works/*path" do
-  #   Proxy.forward conn, path, "http://cache/creative-works/"
-  # end
-  get "/facilities/*path" do
-    Proxy.forward conn, path, "http://cache/facilities/"
-  end
-  get "/registered-organizations/*path" do
-    Proxy.forward conn, path, "http://cache/registered-organizations/"
-  end
-  get "/quality-labels/*path" do
-    Proxy.forward conn, path, "http://cache/quality-labels/"
-  end
-  get "/lodgings/*path" do
-    Proxy.forward conn, path, "http://cache/lodgings/"
-  end
-  get "/media-objects/*path" do
-    Proxy.forward conn, path, "http://cache/media-objects/"
-  end
-  get "/registrations/*path" do
-    Proxy.forward conn, path, "http://cache/registrations/"
-  end
-  # get "/rooms/*path" do
-  #   Proxy.forward conn, path, "http://cache/rooms/"
-  # end
-  get "/touristic-regions/*path" do
-    Proxy.forward conn, path, "http://cache/touristic-regions/"
-  end
-  # get "/rental-units/*path" do
-  #   Proxy.forward conn, path, "http://cache/rental-units/"
-  # end
-  # get "/locations/*path" do
-  #   Proxy.forward conn, path, "http://cache/locations/"
-  # end
-  # get "/licenses/*path" do
-  #   Proxy.forward conn, path, "http://cache/licenses/"
-  # end
-  get "/addresses/*path" do
-    Proxy.forward conn, path, "http://cache/addresses/"
-  end
-  get "/contact-points/*path" do
-    Proxy.forward conn, path, "http://cache/contact-points/"
-  end
-  get "/geometries/*path" do
-    Proxy.forward conn, path, "http://cache/geometries/"
-  end
-  get "/identifiers/*path" do
-    Proxy.forward conn, path, "http://cache/identifiers/"
-  end
-  get "/quantitative-values/*path" do
-    Proxy.forward conn, path, "http://cache/quantitative-values/"
-  end
-  # get "/locator-designators/*path" do
-  #   Proxy.forward conn, path, "http://cache/locator-designators/"
-  # end
-  get "/concepts/*path" do
-    Proxy.forward conn, path, "http://cache/concepts/"
-  end
-  get "/conceptschemes/*path" do
-    Proxy.forward conn, path, "http://cache/conceptschemes/"
-  end
-  # get "/standardized-units/*path" do
-  #   Proxy.forward conn, path, "http://cache/standardized-units/"
-  # end
-  # get "/audiences/*path" do
-  #   Proxy.forward conn, path, "http://cache/audiences/"
-  # end
-  # get "/languages/*path" do
-  #   Proxy.forward conn, path, "http://cache/languages/"
-  # end
-  # get "/file-formats/*path" do
-  #   Proxy.forward conn, path, "http://cache/file-formats/"
-  # end
-  # get "/locator-designator-types/*path" do
-  #   Proxy.forward conn, path, "http://cache/locator-designator-types/"
-  # end
-  # get "/registration-statuses/*path" do
-  #   Proxy.forward conn, path, "http://cache/registration-statuses/"
-  # end
-  # get "/registration-lodging-types/*path" do
-  #   Proxy.forward conn, path, "http://cache/registration-lodging-types/"
-  # end
-  # get "/registration-publication-lodging-types/*path" do
-  #   Proxy.forward conn, path, "http://cache/registration-publication-lodging-types/"
-  # end
 
-  # Data dumps
-  get "/files/:id/download" do
-    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+  get "/favicon.ico", %{ layer: :static } do
+    send_resp( conn, 404, "" )
   end
-  get "/files/*path" do
-    Proxy.forward conn, path, "http://cache/files/"
+
+  ###############
+  # SPARQL
+  ###############
+  get "/sparql", %{ layer: :sparql, accept: %{ html: true } } do
+    forward conn, [], "http://frontend/sparql"
   end
+
+  match "/sparql", %{ layer: :sparql, accept: %{ sparql: true } } do
+    forward conn, [], "http://sparql:8890/sparql"
+  end
+
+  ###############
+  # RESOURCES
+  ###############
+
+  # Resources may be exposed via mu-cl-resources to build custom subject pages
+
   get "/data-dumps/*path" do
-    Proxy.forward conn, path, "http://cache/data-dumps/"
+    forward conn, path, "http://cache/data-dumps/"
   end
 
-  # Catch-all route
-  match _ do
+  ###############
+  # API SERVICES
+  ###############
+
+  get "/files/*path", %{ layer: :api_services, accept: %{ any: true } } do
+    forward conn, path, "http://file/files/"
+  end
+
+  #################
+  # FRONTEND PAGES
+  #################
+  get "/*path", %{ layer: :frontend_fallback, accept: %{ html: true } } do
+    # We forward path for fastboot
+    forward conn, path, "http://frontend/"
+  end
+
+  #################
+  # NOT FOUND
+  #################
+  match "/*_", %{ last_call: true } do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   end
 
