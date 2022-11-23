@@ -6,7 +6,7 @@ Semantic platform of Toerisme Vlaanderen.
 ```
 git clone https://github.com/redpencilio/linked.toerismevlaanderen.be.git
 cd linked.toerismevlaanderen.be
-docker-compose up
+docker-compose up -d
 ```
 
 The stack is built starting from [mu-project](https://github.com/mu-semtech/mu-project).
