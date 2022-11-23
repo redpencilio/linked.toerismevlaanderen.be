@@ -56,6 +56,13 @@ defmodule Dispatcher do
   ###############
   # API SERVICES
   ###############
+  get "/resource-labels/*path", %{ layer: :api_services, accept: %{ json: true } } do
+    forward conn, path, "http://resource-labels-cache/"
+  end
+
+  get "/uri-info/*path", %{ layer: :api_services, accept: %{ json: true } } do
+    forward conn, path, "http://uri-info/"
+  end
 
   get "/files/*path", %{ layer: :api_services, accept: %{ any: true } } do
     forward conn, path, "http://file/files/"
