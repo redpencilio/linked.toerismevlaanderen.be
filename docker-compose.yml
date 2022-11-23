@@ -25,9 +25,11 @@ services:
     restart: always
     logging: *default-logging
   sparql:
-    image: semtech/mu-authorization:0.2.0
+    image: semtech/mu-authorization:0.6.0-beta.7
     environment:
       MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
+      DATABASE_COMPATIBILITY: "Virtuoso"
+      DATABASE_OVERLOAD_RECOVERY: "on"
     volumes:
       - ./config/authorization:/config
     restart: always
