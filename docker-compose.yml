@@ -45,6 +45,14 @@ services:
       - ./data/db:/data
     restart: always
     logging: *default-logging
+  migrations:
+    image: semtech/mu-migrations-service:0.7.0
+    links:
+      - triplestore:database
+    volumes:
+      - ./config/migrations:/data/migrations
+    restart: always
+    logging: *default-logging
   cache:
     image: semtech/mu-cache:2.0.2
     links:
