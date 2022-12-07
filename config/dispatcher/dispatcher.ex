@@ -53,6 +53,10 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/data-dumps/"
   end
 
+  get "/lodgings/*path" do
+    forward conn, path, "http://cache/lodgings/"
+  end
+
   ###############
   # API SERVICES
   ###############
