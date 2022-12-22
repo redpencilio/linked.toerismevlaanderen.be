@@ -69,6 +69,8 @@ services:
     image: redpencil/logies-data-converter-service:0.4.3
     links:
       - triplestore:database
+    environment:
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/public"
     volumes:
       - ./data/input:/input
       - ./data/files:/output
