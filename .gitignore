@@ -8,7 +8,6 @@
 /data/db/virtuoso.log
 /data/db/virtuoso.pxa
 /data/db/virtuoso.trx
-!/data/db/virtuoso.ini
 !/data/db/toLoad
 !/data/db/toLoad/*
 /data/files/*
