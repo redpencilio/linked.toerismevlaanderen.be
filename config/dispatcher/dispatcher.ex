@@ -78,6 +78,8 @@ defmodule Dispatcher do
   get "/*path", %{ layer: :frontend_fallback, accept: %{ html: true } } do
     # We forward path for fastboot
     forward conn, path, "http://frontend/"
+    # In case of non-fastboot frontend, change to line below
+    # forward conn, [], "http://frontend/index.html"
   end
 
   #################
