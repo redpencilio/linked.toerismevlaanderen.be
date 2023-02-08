@@ -1,0 +1,38 @@
+<http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed> a <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
+<http://mu.semte.ch/vocabularies/core/uuid> "3926090c-7a31-45b5-8c68-8ed2c138d7ed";
+   <http://purl.org/dc/terms/modified> "2023-02-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://linked.toerismevlaanderen.be/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>;
+   <http://www.w3.org/2004/02/skos/core#prefLabel> "Location types"@en;
+   <http://xmlns.com/foaf/0.1/page> <http://linked.toerismevlaanderen.be/doc/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed> .
+   
+<http://linked.toerismevlaanderen.be/id/concepts/98f4dcef-a4de-4573-a306-b5f1e9f65530> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "98f4dcef-a4de-4573-a306-b5f1e9f65530";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Rural"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Landelijk"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "RURAL"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/ff15b994-03a9-45cd-b066-dc2f42cdd5ac> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "ff15b994-03a9-45cd-b066-dc2f42cdd5ac";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Farm"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Boerderij"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "ACTIVE_FARM"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/03e58bde-7d4c-4874-8d45-60e847780e88> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "03e58bde-7d4c-4874-8d45-60e847780e88";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Urban"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Stedelijk"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "URBAN"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/f440b724-0c51-4fe7-9a5d-36f5083bbe22> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "f440b724-0c51-4fe7-9a5d-36f5083bbe22";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Indoor"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Binnenshuis"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "INDOOR"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/3926090c-7a31-45b5-8c68-8ed2c138d7ed>.
