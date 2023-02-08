@@ -1,0 +1,27 @@
+<http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128> a <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
+<http://mu.semte.ch/vocabularies/core/uuid> "50459fe4-967e-488d-8460-739abd4a1128";
+   <http://purl.org/dc/terms/modified> "2023-02-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://linked.toerismevlaanderen.be/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>;
+   <http://www.w3.org/2004/02/skos/core#prefLabel> "Contact types"@en;
+   <http://xmlns.com/foaf/0.1/page> <http://linked.toerismevlaanderen.be/doc/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128> .
+   
+<http://linked.toerismevlaanderen.be/id/concepts/ac3f40cd-3700-490f-95ad-d8300b28b16e> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "ac3f40cd-3700-490f-95ad-d8300b28b16e";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "TVA contact"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "TVA contact"@nl;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>.
+   
+   <http://linked.toerismevlaanderen.be/id/concepts/461f5ca3-b20e-4f27-9d10-35c2ee64ccaa> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "461f5ca3-b20e-4f27-9d10-35c2ee64ccaa";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "TVA organization"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "TVA organisatie"@nl;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>.
+   
+   <http://linked.toerismevlaanderen.be/id/concepts/fa2171ae-149f-4d33-aba0-d992fe7d9caf> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "fa2171ae-149f-4d33-aba0-d992fe7d9caf";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Product owner"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Eigenaar"@nl;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/50459fe4-967e-488d-8460-739abd4a1128>.
