@@ -1,0 +1,219 @@
+<http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94> a <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
+<http://mu.semte.ch/vocabularies/core/uuid> "718f7e3d-90a8-41b6-a14e-b8439e566a94";
+   <http://purl.org/dc/terms/modified> "2023-02-08"^^<http://www.w3.org/2001/XMLSchema#date>;
+   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://linked.toerismevlaanderen.be/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+   <http://www.w3.org/2004/02/skos/core#prefLabel> "Product types"@en;
+   <http://xmlns.com/foaf/0.1/page> <http://linked.toerismevlaanderen.be/doc/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94> .
+   
+<http://linked.toerismevlaanderen.be/id/concepts/01fc1581-6297-42b5-9f53-3c0934c8a412> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "01fc1581-6297-42b5-9f53-3c0934c8a412";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "TVA Youth accommodation"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "TVA Jeugdverblijf"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "YOUTH_ACCOMMODATION"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/cb0b8e92-6f10-4954-bbab-863ce609d0e4> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "cb0b8e92-6f10-4954-bbab-863ce609d0e4";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Amusement park"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Amusementspark"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "ATTRACTION_OR_ANIMAL_PARK"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/4f717240-71ac-4888-bd88-6acdf8b7614a> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "4f717240-71ac-4888-bd88-6acdf8b7614a";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Food Establishment"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Eetgelegenheid"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "FOOD_DRINKS"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/e84cd3eb-cdcb-4e0d-89fe-0a9b5aa9ee16> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "e84cd3eb-cdcb-4e0d-89fe-0a9b5aa9ee16";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Renting service"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Verhuurdienst"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "RENTING_SERVICE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+<http://linked.toerismevlaanderen.be/id/concepts/b6ad1f2c-a98b-4a51-a276-926c229b1c81> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "b6ad1f2c-a98b-4a51-a276-926c229b1c81";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Building"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Gebouw"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "BUILDING"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/6a6488d8-7918-4dc4-b04f-9305695b3237> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "6a6488d8-7918-4dc4-b04f-9305695b3237";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Discotheque"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Discotheek"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "NIGHT_LIFE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/0a5b71bb-fd76-4bde-9a70-a634dd6e5efd> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "0a5b71bb-fd76-4bde-9a70-a634dd6e5efd";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Loop"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Lus"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "LOOP"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/93a6a6b7-a3a7-423f-b368-b59f52e618ae> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "93a6a6b7-a3a7-423f-b368-b59f52e618ae";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Museum"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Museum"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "MUSEUM"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/681318e2-92d7-4ea4-87b1-0a8d2b38ee1b> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "681318e2-92d7-4ea4-87b1-0a8d2b38ee1b";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Playground"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Speeltuin"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "PLAY"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/ef7b4899-9f2a-4bec-a5de-a42a9d710e25> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "ef7b4899-9f2a-4bec-a5de-a42a9d710e25";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Nature"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Natuur"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "NATURE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/5373033e-2a63-4cae-8fc6-4418133c13b7> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "5373033e-2a63-4cae-8fc6-4418133c13b7";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Cemetery"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Begraafplaats"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "CEMETERY"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/1e6e5f39-02e1-4653-8f6f-f24a644710bc> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "1e6e5f39-02e1-4653-8f6f-f24a644710bc";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Excursion"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Excursie"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "EXCURSION_OR_DAY_TRIP"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/7be203f3-9af4-4116-a4a1-7e639d632b1e> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "7be203f3-9af4-4116-a4a1-7e639d632b1e";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Tourist information office"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Toeristisch infopunt"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "TOURIST_INFORMATION_CENTRE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/77c0e5fe-d56a-4120-b3d0-2d466bff4890> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "77c0e5fe-d56a-4120-b3d0-2d466bff4890";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Locatie"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "MONUMENT"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+     
+<http://linked.toerismevlaanderen.be/id/concepts/008f3854-d289-4bea-855a-11e0e434a8f1> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "008f3854-d289-4bea-855a-11e0e434a8f1";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Congress centre"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Congrescentrum"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "CONGRESS_CENTRE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/e8920ff9-92f3-4ef6-9aa9-155de1d310de> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "e8920ff9-92f3-4ef6-9aa9-155de1d310de";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Region"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Regio"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "LOCATION_OR_REGION"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/4d9c86b4-5415-42f5-a690-74691c8c5ab6> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "4d9c86b4-5415-42f5-a690-74691c8c5ab6";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Evenement"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "EVENT"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/06ef75ef-c023-4094-9f23-d7e7f92b1d64> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "06ef75ef-c023-4094-9f23-d7e7f92b1d64";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Thematic route"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Thematische route"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "THEMATIC_ROUTE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/5fdc9c43-d20d-4b70-9e08-07cedbfdd932> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "5fdc9c43-d20d-4b70-9e08-07cedbfdd932";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Guided tour"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Begeleide rondleiding"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "GUIDED_TOUR"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/eb36c2f7-9ee9-482e-8e88-7b7e731d7e00> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "eb36c2f7-9ee9-482e-8e88-7b7e731d7e00";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Public facility"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Publieke voorziening"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "PUBLIC_FACILITY"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/0b21e67e-8928-49da-99b5-eefc16b6847e> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "0b21e67e-8928-49da-99b5-eefc16b6847e";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Boat trip"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Boottocht"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "BOAT"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/a43cea2b-8e82-4d27-831a-33f24cda249f> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "a43cea2b-8e82-4d27-831a-33f24cda249f";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Sports location"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Sportlocatie"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "SPORT"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/b0740a42-019c-474c-8079-6e6ad3e3a6c0> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "b0740a42-019c-474c-8079-6e6ad3e3a6c0";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Wellness center"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Wellness centrum"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "SPA_OR_WELLNESS"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.
+   
+   
+<http://linked.toerismevlaanderen.be/id/concepts/9dd33bc9-cbc7-4531-b89d-8d395e405db0> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "9dd33bc9-cbc7-4531-b89d-8d395e405db0";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Node netwerk"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Knooppunten netwerk"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "NODE_NETWORK"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/718f7e3d-90a8-41b6-a14e-b8439e566a94>.   
+   
+ 
