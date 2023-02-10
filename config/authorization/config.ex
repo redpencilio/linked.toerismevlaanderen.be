@@ -1,4 +1,5 @@
 alias Acl.Accessibility.Always, as: AlwaysAccessible
+alias Acl.Accessibility.ByQuery, as: AccessByQuery
 alias Acl.GraphSpec.Constraint.Resource, as: ResourceConstraint
 alias Acl.GraphSpec, as: GraphSpec
 alias Acl.GroupSpec, as: GroupSpec
@@ -24,7 +25,7 @@ defmodule Acl.UserGroups.Config do
             }
           },
           %GraphSpec{
-            graph: "http://mu.semte.ch/graphs/mapped",
+            graph: "http://mu.semte.ch/graphs/mapped/public",
             constraint: %ResourceConstraint{
               resource_types: [
                 "http://purl.org/dc/terms/Agent",
@@ -47,6 +48,29 @@ defmodule Acl.UserGroups.Config do
                 "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
                 "http://www.w3.org/ns/prov#Generation",
                 "http://www.w3.org/ns/prov#Invalidation"
+              ]
+            }
+          }
+        ]
+      },
+
+      %GroupSpec{
+        name: "private",
+        useage: [:read],
+        access: %AccessByQuery{
+          vars: [],
+          query: "
+            PREFIX muAccount: <http://mu.semte.ch/vocabularies/account/>
+            PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+            SELECT DISTINCT ?partner_id WHERE {
+              <SESSION_ID> muAccount:account/mu:uuid ?vendor_id .
+            }"
+        },
+        graphs: [
+          %GraphSpec{
+            graph: "http://mu.semte.ch/graphs/mapped/private",
+            constraint: %ResourceConstraint{
+              resource_types: [
               ]
             }
           }
