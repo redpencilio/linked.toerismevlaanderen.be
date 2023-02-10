@@ -454,3 +454,111 @@
     <http://www.w3.org/2004/02/skos/core#prefLabel> "Bos"@nl;
     <http://www.w3.org/2004/02/skos/core#notation> "WOOD"@en;
    <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/6bb68182-84f7-4717-81c5-7bacdcdccd0f> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "6bb68182-84f7-4717-81c5-7bacdcdccd0f";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Child farm"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Kinderboerderij"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "CHILD_FARM"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/5d0b9295-3865-4469-8873-69598d8132ea> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "5d0b9295-3865-4469-8873-69598d8132ea";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Fossils, minerals and stones"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Fosielen, mineralen en stenen"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "FOSSILS_AND_MINERALS_AND_STONES"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+<http://linked.toerismevlaanderen.be/id/concepts/95d3b12b-9295-4c56-86eb-b7c517006b69> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "95d3b12b-9295-4c56-86eb-b7c517006b69";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Library"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Bibliotheek"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "LIBRARY"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/f46ac35d-b986-496c-90ad-d38742ca248c> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "f46ac35d-b986-496c-90ad-d38742ca248c";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Literature"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Literatuur"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "LITERATURE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/8092a515-e268-4bc3-b33b-95aef84f70dc> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "8092a515-e268-4bc3-b33b-95aef84f70dc";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Medicine"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Geneeskunde"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "MEDICINE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/feec41f9-a1d4-4975-b949-bfc3dd879991> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "feec41f9-a1d4-4975-b949-bfc3dd879991";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Other services"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Andere diensten"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "OTHER_SERVICES"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/2088a6b0-225e-410e-8049-e3e72fcdb6e3> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "2088a6b0-225e-410e-8049-e3e72fcdb6e3";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Photography and film"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Fotografie en film"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "PHOTOGRAPHY_AND_FILM"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/43e2faaa-d6d7-4f54-837f-18dbeada331d> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "43e2faaa-d6d7-4f54-837f-18dbeada331d";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Pottery, ceramics and porcelain"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Aardewerk, keramiek en porselein"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "POTTERY_AND_CERAMICS_AND_PORCELAIN"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/185304ba-f42f-4f61-bf76-1b4d1b4a374e> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "185304ba-f42f-4f61-bf76-1b4d1b4a374e";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Science"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Wetenschap"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "SCIENCE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/4d1e866b-4b27-4623-86b0-6af27600578e> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "4d1e866b-4b27-4623-86b0-6af27600578e";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Shipping"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Verzenden"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "SHIPPING"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/38d700a0-2d2b-4177-9ce9-b741ddb510b2> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "38d700a0-2d2b-4177-9ce9-b741ddb510b2";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Textiles and lace"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Textiel en kant"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "TEXTILES_AND_LACE"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
+
+
+
+<http://linked.toerismevlaanderen.be/id/concepts/fd1c3cdd-69e4-46b0-9cb1-a83d2b9303d4> a <http://www.w3.org/2004/02/skos/core#Concept>;
+<http://mu.semte.ch/vocabularies/core/uuid> "fd1c3cdd-69e4-46b0-9cb1-a83d2b9303d4";
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Thematic"@en;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Thematisch"@nl;
+    <http://www.w3.org/2004/02/skos/core#notation> "THEMATIC"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/153e1799-e59a-4052-a1ad-f6f1defad372>.
