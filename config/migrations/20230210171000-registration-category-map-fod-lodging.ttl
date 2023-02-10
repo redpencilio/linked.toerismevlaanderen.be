@@ -1,0 +1,12 @@
+<http://linked.toerismevlaanderen.be/id/concepts/488818e6-e991-49b8-a615-d849f5ad5f6e> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/b1d5cb40-4d86-4555-a771-1b7877540af7>.
+<http://linked.toerismevlaanderen.be/id/concepts/f79f1c45-9b70-4a78-b0ef-df67bd440692> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/eecd4485-bb91-4d3a-a419-21d549cf6586>.
+<http://linked.toerismevlaanderen.be/id/concepts/d2d28d1d-bd4e-4aac-86ae-6a70861a7a73> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/eecd4485-bb91-4d3a-a419-21d549cf6586>.
+<http://linked.toerismevlaanderen.be/id/concepts/332fe286-4a94-47b6-a946-84f5035004d0> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/181d8b88-fb49-4225-86eb-588f473dd2e6>.
+<http://linked.toerismevlaanderen.be/id/concepts/9882a4ac-7bd2-46d1-9eee-8311125ad6be> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/eecd4485-bb91-4d3a-a419-21d549cf6586>.
+<http://linked.toerismevlaanderen.be/id/concepts/842d68ad-5dec-45d3-8b97-c3002fedf958> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/b1d5cb40-4d86-4555-a771-1b7877540af7>.
+<http://linked.toerismevlaanderen.be/id/concepts/332fe286-4a94-47b6-a946-84f5035004d0> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/181d8b88-fb49-4225-86eb-588f473dd2e6>.
+<http://linked.toerismevlaanderen.be/id/concepts/5b37541f-fd32-4ef8-8ca9-5881f30dd4d7> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/9c136d96-fe93-468c-8bdf-897f062ac8b6>.
+<http://linked.toerismevlaanderen.be/id/concepts/1e01d995-7d1f-40e2-8a90-32c7795e09ee> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/2df3a20a-7048-4ed6-90f6-5f0796a0f973>.
+<http://linked.toerismevlaanderen.be/id/concepts/29f9d6d0-d945-4819-bbc6-5c2caf46eb73> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/93801b15-295e-4a06-9666-6e09cee11ec0>.
+<http://linked.toerismevlaanderen.be/id/concepts/149c732c-1369-4448-b0ea-d7a26ee8757f> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/c06296f1-1970-4241-9b8d-d017c00549e5>.
+<http://linked.toerismevlaanderen.be/id/concepts/3fc52ed7-75b5-4690-a8ba-115662d1f1aa> skos:relatedMatch <http://linked.toerismevlaanderen.be/id/concepts/93801b15-295e-4a06-9666-6e09cee11ec0>.
