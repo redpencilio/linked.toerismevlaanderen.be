@@ -69,14 +69,15 @@ services:
     restart: always
     logging: *default-logging
   import:
-    image: redpencil/logies-data-converter-service:0.4.3
+    image: redpencil/logies-data-converter-service:latest
     links:
       - triplestore:database
     environment:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/public"
     volumes:
       - ./data/input:/input
-      - ./data/files:/output
+      - ./data/output:/output
+      - ./data/files:/share
     restart: always
     logging: *default-logging
   file:
