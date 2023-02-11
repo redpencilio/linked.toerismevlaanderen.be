@@ -17,10 +17,13 @@ defmodule Acl.UserGroups.Config do
             graph: "http://mu.semte.ch/graphs/public",
             constraint: %ResourceConstraint{
               resource_types: [
-                "https://data.vlaanderen.be/ns/logies#Faciliteit",
+                "http://purl.org/dc/terms/Agent",
+                "http://www.w3.org/2004/02/skos/core#Collection",
+                "http://www.w3.org/2004/02/skos/core#Concept",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                 "http://www.w3.org/ns/regorg#RegisteredOrganization",
-                "https://data.vlaanderen.be/ns/logies#ToeristischeRegio",
-                "http://purl.org/dc/terms/LicenseDocument"
+                "https://data.vlaanderen.be/ns/logies#Faciliteit",
+                "https://data.vlaanderen.be/ns/logies#ToeristischeRegio"
               ]
             }
           },
@@ -28,26 +31,29 @@ defmodule Acl.UserGroups.Config do
             graph: "http://mu.semte.ch/graphs/mapped/public",
             constraint: %ResourceConstraint{
               resource_types: [
-                "http://purl.org/dc/terms/Agent",
+                "http://linked.toerismevlaanderen.be/vocabularies/accessibility/AccessibilityInformation",
+                "http://schema.org/Accommodation",
+                "http://schema.org/ContactPoint",
+                "http://schema.org/GovernmentPermit",
+                "http://schema.org/MediaObject",
+                "http://schema.org/Place",
+                "http://schema.org/PropertyValue",
+                "http://schema.org/QuantitativeValue",
                 "http://schema.org/Rating",
+                "http://schema.org/Service",
+                "http://schema.org/TouristAttraction",
+                "http://w3id.org/ost/ns#Recreation",
+                "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+                "http://www.w3.org/ns/adms#Identifier",
+                "http://www.w3.org/ns/locn#Address",
+                "http://www.w3.org/ns/locn#Geometry",
+                "http://www.w3.org/ns/org#Organisation",
+                "http://www.w3.org/ns/prov#Generation",
+                "http://www.w3.org/ns/prov#Invalidation",
                 "https://data.vlaanderen.be/ns/logies#Beschrijving",
-                "http://schema.org/CreativeWork",
                 "https://data.vlaanderen.be/ns/logies#Kwaliteitslabel",
                 "https://data.vlaanderen.be/ns/logies#Logies",
-                "https://data.vlaanderen.be/ns/logies#MediaObject",
-                "https://data.vlaanderen.be/ns/logies#Registratie",
-                "https://data.vlaanderen.be/ns/logies#Ruimte",
-                "https://data.vlaanderen.be/ns/logies#Verhuureenheid",
-                "http://purl.org/dc/terms/Location",
-                "http://www.w3.org/ns/locn#:Address",
-                "http://schema.org/ContactPoint",
-                "http://www.w3.org/ns/locn#:Geometry",
-                "http://www.w3.org/ns/adms#Identifier",
-                "http://schema.org/QuantitativeValue",
-                "https://data.vlaanderen.be/ns/adres#Locatieaanduiding",
-                "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
-                "http://www.w3.org/ns/prov#Generation",
-                "http://www.w3.org/ns/prov#Invalidation"
+                "https://data.vlaanderen.be/ns/logies#Registratie"
               ]
             }
           }
@@ -71,6 +77,10 @@ defmodule Acl.UserGroups.Config do
             graph: "http://mu.semte.ch/graphs/mapped/private",
             constraint: %ResourceConstraint{
               resource_types: [
+                "http://schema.org/ContactPoint",
+                "http://www.w3.org/ns/adms#Identifier",
+                "http://www.w3.org/ns/locn#Address",
+                "http://www.w3.org/ns/org#Organisation"
               ]
             }
           }
