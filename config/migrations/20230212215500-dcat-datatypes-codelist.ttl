@@ -1,0 +1,9 @@
+<http://themis.vlaanderen.be/id/concept-scheme/a76297cd-ba80-468c-bc18-4b9e1117eee9> a <http://www.w3.org/2004/02/skos/core#ConceptScheme>;
+    <http://mu.semte.ch/vocabularies/core/uuid> "a76297cd-ba80-468c-bc18-4b9e1117eee9" ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "DCAT dataset types concept scheme" .
+
+<http://linked.toerismevlaanderen.be/id/dataset-types/ca82a1e3-8a7c-438e-ba37-cf36063ba060> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+    <http://mu.semte.ch/vocabularies/core/uuid> "ca82a1e3-8a7c-438e-ba37-cf36063ba060" ;
+    <http://www.w3.org/2004/02/skos/core#prefLabel> "Toeristische attracties en logies"@nl ;
+    <http://www.w3.org/2004/02/skos/core#definition> "Algemene en toegankelijkheidsinformatie over toeristische attracties in Vlaanderen"@nl ;
+    <http://www.w3.org/2004/02/skos/core#inScheme> <http://themis.vlaanderen.be/id/concept-scheme/a76297cd-ba80-468c-bc18-4b9e1117eee9> .
