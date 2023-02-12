@@ -46,6 +46,12 @@ services:
       - ./config/db/virtuoso.ini:/data/virtuoso.ini
     restart: always
     logging: *default-logging
+  delta-notifier:
+    image: semtech/mu-delta-notifier:0.1.0
+    volumes:
+        - ./config/delta:/config
+    logging: *default-logging
+    restart: always
   migrations:
     image: semtech/mu-migrations-service:0.7.0
     links:
