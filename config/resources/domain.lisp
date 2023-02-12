@@ -30,4 +30,4 @@
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/identifiers/")
   :on-path "identifiers")
 
-(read-domain-file "data-dumps-domain.lisp")
+(read-domain-file "dcat-datasets-domain.lisp")

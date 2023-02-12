@@ -49,8 +49,8 @@ defmodule Dispatcher do
 
   # Resources may be exposed via mu-cl-resources to build custom subject pages
 
-  get "/data-dumps/*path" do
-    forward conn, path, "http://cache/data-dumps/"
+  get "/datasets/*path" do
+    forward conn, path, "http://cache/datasets/"
   end
 
   get "/tourist-attractions/*path" do
