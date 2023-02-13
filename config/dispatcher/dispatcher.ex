@@ -49,11 +49,11 @@ defmodule Dispatcher do
 
   # Resources may be exposed via mu-cl-resources to build custom subject pages
 
-  get "/datasets/*path" do
+  get "/datasets/*path", %{ layer: :resources, accept: %{ json: true } } do
     forward conn, path, "http://cache/datasets/"
   end
 
-  get "/tourist-attractions/*path" do
+  get "/tourist-attractions/*path", %{ layer: :resources, accept: %{ json: true } } do
     forward conn, path, "http://cache/tourist-attractions/"
   end
 
