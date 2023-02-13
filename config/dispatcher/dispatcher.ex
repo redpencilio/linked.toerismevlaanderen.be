@@ -60,6 +60,14 @@ defmodule Dispatcher do
   ###############
   # API SERVICES
   ###############
+  post "/sessions", %{ layer: :api_services, accept: %{ json: true } } do
+    forward conn, [], "http://login/sessions"
+  end
+
+  delete "/sessions/current", %{ layer: :api_services, accept: %{ json: true } } do
+    forward conn, [], "http://login/sessions/current"
+  end
+
   get "/resource-labels/*path", %{ layer: :api_services, accept: %{ json: true } } do
     forward conn, path, "http://resource-labels-cache/"
   end

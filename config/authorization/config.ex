@@ -66,10 +66,10 @@ defmodule Acl.UserGroups.Config do
         access: %AccessByQuery{
           vars: [],
           query: "
-            PREFIX muAccount: <http://mu.semte.ch/vocabularies/account/>
+            PREFIX session: <http://mu.semte.ch/vocabularies/session/>
             PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-            SELECT DISTINCT ?partner_id WHERE {
-              <SESSION_ID> muAccount:account/mu:uuid ?vendor_id .
+            SELECT DISTINCT ?account_id WHERE {
+              <SESSION_ID> session:account/mu:uuid ?account_id .
             }"
         },
         graphs: [

@@ -60,6 +60,17 @@ services:
       - ./config/migrations:/data/migrations
     restart: always
     logging: *default-logging
+  login:
+    image: semtech/mu-login-service:3.0.0
+    environment:
+      USERS_GRAPH: "http://mu.semte.ch/graphs/users"
+      SESSIONS_GRAPH: "http://mu.semte.ch/graphs/sessions"
+    restart: always
+    logging: *default-logging
+  registration:
+    image: semtech/mu-registration-service:2.7.3
+    restart: always
+    logging: *default-logging
   cache:
     image: semtech/mu-cache:2.0.2
     links:
