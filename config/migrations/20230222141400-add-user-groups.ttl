@@ -1,0 +1,36 @@
+<http://linked.toerismevlaanderen.be/id/concepts/3b172464-d89c-4f9d-8a0c-7f89385eda53> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "3b172464-d89c-4f9d-8a0c-7f89385eda53";
+ <http://xmlns.com/foaf/0.1/name> "FOD Economie";
+ <http://www.w3.org/2004/02/skos/core#notation> "fod-economy".
+
+<http://linked.toerismevlaanderen.be/id/concepts/1b2024b8-8d35-4777-987d-74c226095a7b> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "1b2024b8-8d35-4777-987d-74c226095a7b";
+ <http://xmlns.com/foaf/0.1/name> "Toerisme voor Allen";
+ <http://www.w3.org/2004/02/skos/core#notation> "tva".
+ 
+ <http://linked.toerismevlaanderen.be/id/concepts/17614c11-e602-4ae2-9a64-496c28f37dd1> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "17614c11-e602-4ae2-9a64-496c28f37dd1";
+ <http://xmlns.com/foaf/0.1/name> "Provincie Vlaams-Brabant";
+ <http://www.w3.org/2004/02/skos/core#notation> "province-flemish-brabant".
+ 
+ <http://linked.toerismevlaanderen.be/id/concepts/4c6fa816-ba88-4fe6-b038-db1c1208a9c7> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "4c6fa816-ba88-4fe6-b038-db1c1208a9c7";
+ <http://xmlns.com/foaf/0.1/name> "Provincie West-Vlaanderen";
+ <http://www.w3.org/2004/02/skos/core#notation> "province-west-flanders".
+ 
+ <http://linked.toerismevlaanderen.be/id/concepts/51f59aa9-da55-40b3-aab0-82648d81ad55> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "51f59aa9-da55-40b3-aab0-82648d81ad55";
+ <http://xmlns.com/foaf/0.1/name> "Provincie Oost-Vlaanderen";
+ <http://www.w3.org/2004/02/skos/core#notation> "province-east-flanders".
+ 
+ <http://linked.toerismevlaanderen.be/id/concepts/78ee4801-1b0d-4bea-b62c-bf324c2f4e8d> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "78ee4801-1b0d-4bea-b62c-bf324c2f4e8d";
+ <http://xmlns.com/foaf/0.1/name> "Provincie Antwerpen";
+ <http://www.w3.org/2004/02/skos/core#notation> "province-antwerp".
+ 
+ <http://linked.toerismevlaanderen.be/id/concepts/b0de22a7-aad1-4cdf-a2e2-53fa28169caf> a <http://xmlns.com/foaf/0.1/Group>;
+ <http://mu.semte.ch/vocabularies/core/uuid> "b0de22a7-aad1-4cdf-a2e2-53fa28169caf";
+ <http://xmlns.com/foaf/0.1/name> "Provincie Limburg";
+ <http://www.w3.org/2004/02/skos/core#notation> "province-limburg".
+ 
+
