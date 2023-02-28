@@ -36,7 +36,7 @@
   :resource-base (s-url "http://linked.toerismevlaanderen.be/id/tourist-attractions/")
   :on-path "tourist-attractions")
 
-(define-resource lodging ()
+(define-resource lodging (tourist-attraction)
   :class (s-prefix "logies:Logies")
   :properties `((:fod-identifier :string ,(s-prefix "dct:identifier"))
                  (:received-fire-safety-advice :boolean ,(s-prefix "tvl:receivedFireSafetyAdvice"))
