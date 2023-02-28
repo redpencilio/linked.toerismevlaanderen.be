@@ -9,25 +9,6 @@
    of responses in the result object's meta.")
 (defparameter *max-group-sorted-properties* nil)
 
-(define-resource tourist-attraction ()
-  :class (s-prefix "schema:TouristAttraction")
-  :properties `((:name :language-string-set ,(s-prefix "schema:name"))
-                 (:alternative-name :language-string-set ,(s-prefix "schema:alternativeName")))
-  :has-one `((identifier :via ,(s-prefix "adms:identifier")
-               :as "identifier"))
-  :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/tourist-attractions/")
-  :on-path "tourist-attractions")
-
-(define-resource identifier ()
-  :class (s-prefix "adms:Identifier")
-  :properties `((:notation :string ,(s-prefix "skos:notation"))
-                 (:issued-by :string ,(s-prefix "adms:schemaAgency")))
-  :has-one `((tourist-atraction :via ,(s-prefix "adms:identifier")
-               :inverse t
-               :as "tourist-attraction"))
-  :features '(include-uri)
-  :resource-base (s-url "http://linked.toerismevlaanderen.be/id/identifiers/")
-  :on-path "identifiers")
-
 (read-domain-file "dcat-datasets-domain.lisp")
+(read-domain-file "concept-domain.json")
+(read-domain-file "touristic-attractions.lisp")

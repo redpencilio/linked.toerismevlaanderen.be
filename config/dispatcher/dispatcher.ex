@@ -8,7 +8,7 @@ defmodule Dispatcher do
     any: [ "*/*" ]
   ]
 
-  define_layers [ :static, :sparql, :resources, :api_services, :frontend_fallback, :not_found ]
+  define_layers [ :static, :sparql, :api_services, :resources, :frontend_fallback, :not_found ]
 
   options "/*_path", _ do
     conn
@@ -44,20 +44,6 @@ defmodule Dispatcher do
   end
 
   ###############
-  # RESOURCES
-  ###############
-
-  # Resources may be exposed via mu-cl-resources to build custom subject pages
-
-  get "/datasets/*path", %{ layer: :resources, accept: %{ json: true } } do
-    forward conn, path, "http://cache/datasets/"
-  end
-
-  get "/tourist-attractions/*path", %{ layer: :resources, accept: %{ json: true } } do
-    forward conn, path, "http://cache/tourist-attractions/"
-  end
-
-  ###############
   # API SERVICES
   ###############
   post "/sessions", %{ layer: :api_services, accept: %{ json: true } } do
@@ -76,9 +62,119 @@ defmodule Dispatcher do
     forward conn, path, "http://uri-info/"
   end
 
-  get "/files/*path", %{ layer: :api_services, accept: %{ any: true } } do
-    forward conn, path, "http://file/files/"
+  get "/files/:id/download", %{ layer: :api_services, accept: %{ any: true } } do
+    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
   end
+
+
+  ###############
+  # RESOURCES
+  ###############
+
+  get "/catalogs/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/catalogs/"
+  end
+
+  get "/datasets/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/datasets/"
+  end
+
+  get "/files/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/files/"
+  end
+
+  get "/concepts/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/concepts/"
+  end
+
+  get "/concept-schemes/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/concept-schemes/"
+  end
+
+  get "/tourist-attractions/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/tourist-attractions/"
+  end
+
+  get "/lodgings/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/lodgings/"
+  end
+
+  get "/identifiers/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/identifiers/"
+  end
+
+  get "/registrations/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/registrations/"
+  end
+
+  get "/generations/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/generations/"
+  end
+
+  get "/invalidations/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/invalidations/"
+  end
+
+  get "/addresses/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/addresses/"
+  end
+
+  get "/geometries/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/geometries/"
+  end
+
+  get "/touristic-regions/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/touristic-regions/"
+  end
+
+  get "/contact-points/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/contact-points/"
+  end
+
+  get "/media-objects/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/media-objects/"
+  end
+
+  get "/quality-labels/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/quality-labels/"
+  end
+
+  get "/descriptions/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/descriptions/"
+  end
+
+  get "/accessibility-information/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/accessibility-information/"
+  end
+
+  get "/ratings/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/ratings/"
+  end
+
+  get "/quantitative-values/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/quantitative-values/"
+  end
+
+  get "/property-values/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/property-values/"
+  end
+
+  get "/government-permits/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/government-permits/"
+  end
+
+  get "/facilities/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/facilities/"
+  end
+
+  get "/organizations/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/organizations/"
+  end
+
+  get "/registered-organizations/*path", %{ layer: :resources, accept: %{ json: true } } do
+    forward conn, path, "http://cache/registered-organizations/"
+  end
+
 
   #################
   # FRONTEND PAGES

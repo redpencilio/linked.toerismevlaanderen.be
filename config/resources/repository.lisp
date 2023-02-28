@@ -21,3 +21,4 @@
 (add-prefix "dbpedia" "http://dbpedia.org/ontology/")
 (add-prefix "mu" "http://mu.semte.ch/vocabularies/core/")
 (add-prefix "ext" "http://mu.semte.ch/vocabularies/ext/")
+(add-prefix "tvl" "http://linked.toerismevlaanderen.be/vocabularies/accessibility/")
