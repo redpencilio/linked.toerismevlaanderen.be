@@ -18,9 +18,12 @@ defmodule Acl.UserGroups.Config do
             constraint: %ResourceConstraint{
               resource_types: [
                 "http://purl.org/dc/terms/Agent",
+                "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                 "http://www.w3.org/2004/02/skos/core#Collection",
                 "http://www.w3.org/2004/02/skos/core#Concept",
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/dcat#Catalog",
+                "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/ns/regorg#RegisteredOrganization",
                 "https://data.vlaanderen.be/ns/logies#Faciliteit",
                 "https://data.vlaanderen.be/ns/logies#ToeristischeRegio"
@@ -64,23 +67,30 @@ defmodule Acl.UserGroups.Config do
         name: "private",
         useage: [:read],
         access: %AccessByQuery{
-          vars: [],
+          vars: ["group_id"],
           query: "
             PREFIX session: <http://mu.semte.ch/vocabularies/session/>
             PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-            SELECT DISTINCT ?account_id WHERE {
-              <SESSION_ID> session:account/mu:uuid ?account_id .
+            PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+            SELECT DISTINCT ?group_id WHERE {
+              <SESSION_ID> session:account ?account .
+              ?person foaf:account ?account .
+              ?group foaf:member ?person ;
+                 skos:notation ?group_id .
             }"
         },
         graphs: [
           %GraphSpec{
-            graph: "http://mu.semte.ch/graphs/mapped/private",
+            graph: "http://mu.semte.ch/graphs/mapped/private/",
             constraint: %ResourceConstraint{
               resource_types: [
                 "http://schema.org/ContactPoint",
                 "http://www.w3.org/ns/adms#Identifier",
                 "http://www.w3.org/ns/locn#Address",
-                "http://www.w3.org/ns/org#Organisation"
+                "http://www.w3.org/ns/org#Organisation",
+                "https://data.vlaanderen.be/ns/logies#Logies",
               ]
             }
           }
