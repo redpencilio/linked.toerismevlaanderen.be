@@ -1,0 +1,15 @@
+DELETE {
+  GRAPH ?g {
+        ?s ?p ?o
+  }
+} INSERT {
+  GRAPH ?g {
+        ?newS ?p ?o
+  }
+} WHERE {
+  GRAPH ?g {
+      ?s a <http://xmlns.com/foaf/0.1/Group> ; ?p ?o .
+      FILTER(STRSTARTS(STR(?s), "http://linked.toerismevlaanderen.be/id/concepts/"))
+  }
+  BIND(IRI(REPLACE(STR(?s), "concepts", "user-groups")) as ?newS)
+}

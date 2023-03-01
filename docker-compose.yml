@@ -69,7 +69,11 @@ services:
     logging: *default-logging
   registration:
     image: semtech/mu-registration-service:2.7.3
-    restart: always
+    entrypoint: echo "Only needed for mu script"
+    environment:
+      USERS_GRAPH: "http://mu.semte.ch/graphs/users"
+      SESSIONS_GRAPH: "http://mu.semte.ch/graphs/sessions"
+    restart: "no"
     logging: *default-logging
   cache:
     image: semtech/mu-cache:2.0.2
