@@ -50,6 +50,10 @@ defmodule Dispatcher do
     forward conn, [], "http://login/sessions"
   end
 
+  get "/sessions/current", %{ layer: :api_services, accept: %{ json: true } } do
+    forward conn, [], "http://login/sessions/current"
+  end
+
   delete "/sessions/current", %{ layer: :api_services, accept: %{ json: true } } do
     forward conn, [], "http://login/sessions/current"
   end
