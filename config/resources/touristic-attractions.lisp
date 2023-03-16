@@ -6,7 +6,7 @@
                  (:keywords :string-set ,(s-prefix "schema:keywords"))
                  (:opening-hours :lang-string-set ,(s-prefix "schema:openingHours"))
                  (:accepts-reservations :boolean ,(s-prefix "schema:acceptsReservations"))
-                 (:modified :string-set ,(s-prefix "dct:modified")))
+                 (:modified :datetime ,(s-prefix "dct:modified")))
   :has-one `((address :via ,(s-prefix "locn:address")
                :as "address")
               (geometry :via ,(s-prefix "locn:geometry")
