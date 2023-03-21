@@ -67,7 +67,7 @@ defmodule Dispatcher do
   end
 
   get "/files/:id/download", %{ layer: :api_services, accept: %{ any: true } } do
-    Proxy.forward conn, [], "http://file/files/" <> id <> "/download"
+    forward conn, [], "http://file/files/" <> id <> "/download"
   end
 
 

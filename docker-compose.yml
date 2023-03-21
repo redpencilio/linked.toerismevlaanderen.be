@@ -97,6 +97,12 @@ services:
       - ./data/files:/share
     restart: always
     logging: *default-logging
+  dataset-generator:
+    image: redpencil/logies-dataset-generator-service:0.1.0
+    volumes:
+      - ./data/files:/share
+    restart: always
+    logging: *default-logging
   file:
     image: semtech/mu-file-service:3.1.2
     volumes:
