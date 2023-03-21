@@ -21,7 +21,7 @@ services:
     restart: always
     logging: *default-logging
   frontend:
-    image: redpencil/frontend-linked.toerismevlaanderen.be:1.2.0-fastboot
+    image: redpencil/frontend-linked.toerismevlaanderen.be:1.3.0-fastboot
     links:
       - identifier:backend
     restart: always
@@ -90,7 +90,7 @@ services:
     restart: always
     logging: *default-logging
   import:
-    image: redpencil/logies-data-converter-service:1.0.0-beta.5
+    image: redpencil/logies-data-converter-service:1.0.0-beta.6
     volumes:
       - ./data/input:/input
       - ./data/output:/output
