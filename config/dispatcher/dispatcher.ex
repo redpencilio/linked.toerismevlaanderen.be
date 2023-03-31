@@ -70,6 +70,10 @@ defmodule Dispatcher do
     forward conn, [], "http://file/files/" <> id <> "/download"
   end
 
+  get "/perm/*path", %{ layer: :api_services, accept: %{ json: true } } do
+    #    forward conn, path, "http:///dataset-generator/perm/"
+        forward conn, path, "http://dataset-generator/perm/"
+  end
 
   ###############
   # RESOURCES
@@ -193,7 +197,7 @@ defmodule Dispatcher do
   #################
   # NOT FOUND
   #################
-  match "/*_", %{ last_call: true } do
+  match "/*_", %{ layer: :not_found } do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   end
 

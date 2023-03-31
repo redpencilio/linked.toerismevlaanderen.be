@@ -98,7 +98,7 @@ services:
     restart: always
     logging: *default-logging
   dataset-generator:
-    image: redpencil/logies-dataset-generator-service:0.1.0
+    image: redpencil/logies-dataset-generator-service:0.2.0
     volumes:
       - ./data/files:/share
     restart: always
