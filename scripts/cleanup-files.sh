@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /home/tvladmin/linked.toerismevlaanderen.be/scripts
 
-KEEP_NB_OF_FILES=10
+KEEP_NB_OF_FILES=100
 FILES_DIR=../data/files/*
 
 # Restart services
