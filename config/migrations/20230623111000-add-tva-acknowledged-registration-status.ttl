@@ -1,0 +1,8 @@
+<http://linked.toerismevlaanderen.be/id/concepts/f9305a29-0508-4e24-8615-f83bd4bf84a7> a <http://www.w3.org/2004/02/skos/core#Concept>;
+   <http://mu.semte.ch/vocabularies/core/uuid> "f9305a29-0508-4e24-8615-f83bd4bf84a7";
+   <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://linked.toerismevlaanderen.be/concepts/f9305a29-0508-4e24-8615-f83bd4bf84a7>;
+   <http://www.w3.org/2004/02/skos/core#inScheme> <http://linked.toerismevlaanderen.be/id/conceptschemes/48c5b233-44bc-49d1-93a7-b5005586baa2>;
+   <http://www.w3.org/2004/02/skos/core#notation> "ACKNOWLEDGED_TVA";
+   <http://www.w3.org/2004/02/skos/core#prefLabel> "Erkend (TVA)"@nl,
+     "Acknowledged (TVA)"@en;
+   <http://www.w3.org/2004/02/skos/core#topConceptOf> <http://linked.toerismevlaanderen.be/id/conceptschemes/48c5b233-44bc-49d1-93a7-b5005586baa2>.
