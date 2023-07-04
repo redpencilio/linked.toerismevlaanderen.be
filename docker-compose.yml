@@ -90,7 +90,7 @@ services:
     restart: always
     logging: *default-logging
   import:
-    image: redpencil/logies-data-converter-service:1.0.0
+    image: redpencil/logies-data-converter-service:1.1.0
     volumes:
       - ./data/input:/input
       - ./data/output:/output
@@ -98,7 +98,7 @@ services:
     restart: always
     logging: *default-logging
   dataset-generator:
-    image: redpencil/logies-dataset-generator-service:0.2.1
+    image: redpencil/logies-dataset-generator-service:0.3.0
     volumes:
       - ./data/files:/share
     restart: always
