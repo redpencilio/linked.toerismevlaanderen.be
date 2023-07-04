@@ -1,0 +1,3 @@
+@prefix tvl: <http://linked.toerismevlaanderen.be/vocabularies/accessibility/>.
+
+<http://linked.toerismevlaanderen.be/id/concepts/f9305a29-0508-4e24-8615-f83bd4bf84a7> tvl:sqlKey "ACKNOWLEDGED_TVA".
