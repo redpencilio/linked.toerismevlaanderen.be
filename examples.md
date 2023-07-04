@@ -47,6 +47,9 @@ SELECT DISTINCT ?logies ?name ?status WHERE {
 ```
 
 #### REST/JSON API
+```bash
+GET /lodgings?filter[registrations][registration-status][:id:]=bb9d1b1b-05ea-4a98-bb54-87084c38da4e,ed624155-305e-4da3-83a0-e4c586ca7b81,f9305a29-0508-4e24-8615-f83bd4bf84a7&filter[registrations][type][:uri:]=http://linked.toerismevlaanderen.be/id/concepts/d2d28d1d-bd4e-4aac-86ae-6a70861a7a73&sort=name
+```
 
 ---
 
@@ -96,7 +99,9 @@ SELECT DISTINCT ?logies ?name ?status ?accessibilityPrefLabel WHERE {
 ```
 
 #### REST/JSON API
-
+```bash
+GET /lodgings?filter[registrations][registration-status][:id:]=bb9d1b1b-05ea-4a98-bb54-87084c38da4e,ed624155-305e-4da3-83a0-e4c586ca7b81,f9305a29-0508-4e24-8615-f83bd4bf84a7&filter[quality-labels][label]=Toegankelijkheidslabel&sort=name
+```
 ---
 
 ### Voorbeeld: Alle erkende en aangemelde jeugdverblijven
@@ -124,7 +129,9 @@ SELECT DISTINCT ?logies ?name ?status WHERE {
 ```
 
 #### REST/JSON API
-
+```bash
+GET /lodgings?filter[registrations][registration-status][:id:]=bb9d1b1b-05ea-4a98-bb54-87084c38da4e,ed624155-305e-4da3-83a0-e4c586ca7b81,f9305a29-0508-4e24-8615-f83bd4bf84a7&filter[registrations][type][:uri:]=http://linked.toerismevlaanderen.be/id/concepts/3fc52ed7-75b5-4690-a8ba-115662d1f1aa&sort=name
+```
 ---
 
 ### Voorbeeld: Alle erkende en aangemelde hotels met meer dan 3 sterren
@@ -187,4 +194,7 @@ SELECT DISTINCT ?logies ?name ?status WHERE {
 ```
 
 #### REST/JSON API
+```bash
+GET /lodgings?filter[registrations][registration-status][:id:]=bb9d1b1b-05ea-4a98-bb54-87084c38da4e,ed624155-305e-4da3-83a0-e4c586ca7b81,f9305a29-0508-4e24-8615-f83bd4bf84a7&filter[registrations][type][:uri:]=http://linked.toerismevlaanderen.be/id/concepts/5b37541f-fd32-4ef8-8ca9-5881f30dd4d7&filter[welcome-addresses][province]=Oost-Vlaanderen&sort=name
+```
 
