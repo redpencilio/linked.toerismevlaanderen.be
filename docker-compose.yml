@@ -14,18 +14,24 @@ services:
       DEFAULT_MU_AUTH_ALLOWED_GROUPS_HEADER: '[{"variables":[],"name":"public"},{"variables":[],"name":"clean"}]'
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   dispatcher:
     image: semtech/mu-dispatcher:2.1.0-beta.2
     volumes:
       - ./config/dispatcher:/config
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   frontend:
     image: redpencil/frontend-linked.toerismevlaanderen.be:1.4.0-fastboot
     links:
       - identifier:backend
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   database:
     image: semtech/mu-authorization:0.6.0-beta.7
     environment:
@@ -36,6 +42,8 @@ services:
       - ./config/authorization:/config
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   triplestore:
     image: redpencil/virtuoso:1.0.0
     environment:
@@ -46,12 +54,16 @@ services:
       - ./config/db/virtuoso.ini:/data/virtuoso.ini
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   delta-notifier:
     image: semtech/mu-delta-notifier:0.1.0
     volumes:
         - ./config/delta:/config
     logging: *default-logging
     restart: always
+    labels:
+      - "logging=true"
   migrations:
     image: semtech/mu-migrations-service:0.7.0
     links:
@@ -60,6 +72,8 @@ services:
       - ./config/migrations:/data/migrations
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   login:
     image: semtech/mu-login-service:3.0.0
     environment:
@@ -67,6 +81,8 @@ services:
       SESSIONS_GRAPH: "http://mu.semte.ch/graphs/sessions"
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   registration:
     image: semtech/mu-registration-service:2.7.3
     entrypoint: echo "Only needed for mu script"
@@ -75,12 +91,16 @@ services:
       SESSIONS_GRAPH: "http://mu.semte.ch/graphs/sessions"
     restart: "no"
     logging: *default-logging
+    labels:
+      - "logging=true"
   cache:
     image: semtech/mu-cache:2.0.2
     links:
       - resource:backend
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   resource:
     image: semtech/mu-cl-resources:1.21.1
     environment:
@@ -89,6 +109,8 @@ services:
       - ./config/resources:/config
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   import:
     image: redpencil/logies-data-converter-service:1.2.0
     volumes:
@@ -97,31 +119,43 @@ services:
       - ./data/files:/share
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   dataset-generator:
     image: redpencil/logies-dataset-generator-service:0.4.1
     volumes:
       - ./data/files:/share
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   file:
     image: semtech/mu-file-service:3.1.2
     volumes:
       - ./data/files:/share
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   uri-info:
     image: redpencil/mu-uri-info-service:0.2.1
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   resource-labels-cache:
     image: semtech/mu-cache:2.0.2
     links:
       - resource-labels:backend
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
   resource-labels:
     image: lblod/resource-label-service:0.3.2
     environment:
       DEFAULT_LANGUAGE: "nil"
     restart: always
     logging: *default-logging
+    labels:
+      - "logging=true"
