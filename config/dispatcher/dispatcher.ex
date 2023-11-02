@@ -8,7 +8,10 @@ defmodule Dispatcher do
     any: [ "*/*" ]
   ]
 
-  define_layers [ :static, :sparql, :api_services, :resources, :frontend_fallback, :not_found ]
+  # Note: web_page is fairly early on because user agents which expect
+  # web pages tend to accept any content type which is not under our
+  # control.
+  define_layers [ :static, :web_page, :sparql, :api_services, :resources, :not_found ]
 
   options "/*_path", _ do
     conn
@@ -32,13 +35,19 @@ defmodule Dispatcher do
     send_resp( conn, 404, "" )
   end
 
+  #################
+  # FRONTEND PAGES
+  #################
+  get "/*path", %{ layer: :web_page, accept: %{ html: true } } do
+    # We forward path for fastboot
+    forward conn, path, "http://frontend/"
+    # In case of non-fastboot frontend, change to line below
+    # forward conn, [], "http://frontend/index.html"
+  end
+
   ###############
   # SPARQL
   ###############
-  get "/sparql", %{ layer: :sparql, accept: %{ html: true } } do
-    forward conn, [], "http://frontend/sparql"
-  end
-
   match "/sparql", %{ layer: :sparql, accept: %{ sparql: true } } do
     forward conn, [], "http://database:8890/sparql"
   end
@@ -181,17 +190,6 @@ defmodule Dispatcher do
 
   get "/registered-organizations/*path", %{ layer: :resources, accept: %{ json: true } } do
     forward conn, path, "http://cache/registered-organizations/"
-  end
-
-
-  #################
-  # FRONTEND PAGES
-  #################
-  get "/*path", %{ layer: :frontend_fallback, accept: %{ html: true } } do
-    # We forward path for fastboot
-    forward conn, path, "http://frontend/"
-    # In case of non-fastboot frontend, change to line below
-    # forward conn, [], "http://frontend/index.html"
   end
 
   #################
