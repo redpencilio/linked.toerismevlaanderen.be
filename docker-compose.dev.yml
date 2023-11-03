@@ -4,6 +4,9 @@ services:
   identifier:
     ports:
       - 80:80
+  frontend:
+    environment:
+      EMBER_FASTBOOT_HOST: "localhost"
   triplestore:
     ports:
       - "8890:8890"
