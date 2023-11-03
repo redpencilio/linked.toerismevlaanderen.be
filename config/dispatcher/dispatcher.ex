@@ -27,10 +27,6 @@ defmodule Dispatcher do
     forward conn, path, "http://frontend/assets/"
   end
 
-  get "/index.html", %{ layer: :static } do
-    forward conn, [], "http://frontend/index.html"
-  end
-
   get "/favicon.ico", %{ layer: :static } do
     send_resp( conn, 404, "" )
   end
