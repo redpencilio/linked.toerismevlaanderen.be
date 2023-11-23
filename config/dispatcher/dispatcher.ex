@@ -34,6 +34,10 @@ defmodule Dispatcher do
   #################
   # FRONTEND PAGES
   #################
+  get "/files/:id/download", %{ layer: :web_page, accept: %{ any: true } } do
+    forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+
   get "/*path", %{ layer: :web_page, accept: %{ html: true } } do
     # We forward path for fastboot
     forward conn, path, "http://frontend/"
@@ -69,10 +73,6 @@ defmodule Dispatcher do
 
   get "/uri-info/*path", %{ layer: :api_services, accept: %{ json: true } } do
     forward conn, path, "http://uri-info/"
-  end
-
-  get "/files/:id/download", %{ layer: :api_services, accept: %{ any: true } } do
-    forward conn, [], "http://file/files/" <> id <> "/download"
   end
 
   get "/perm/*path", %{ layer: :api_services, accept: %{ json: true } } do
