@@ -15,6 +15,7 @@
 (add-prefix "geosparql" "http://www.opengis.net/ont/geosparql#")
 (add-prefix "foaf" "http://xmlns.com/foaf/0.1/")
 (add-prefix "vcard" "http://www.w3.org/2006/vcard/ns#")
+(add-prefix "org" "http://www.w3.org/ns/org#")
 (add-prefix "regorg" "http://www.w3.org/ns/regorg#")
 (add-prefix "nfo" "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#")
 (add-prefix "nie" "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#")
