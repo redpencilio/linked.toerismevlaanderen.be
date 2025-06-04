@@ -17,6 +17,7 @@ export default [
     options: {
       resourceFormat: 'v0.0.1',
       gracePeriod: 250,
+      foldEffectiveChanges: true,
       ignoreFromSelf: true
     }
   },
@@ -31,6 +32,7 @@ export default [
     options: {
       resourceFormat: 'v0.0.1',
       gracePeriod: 250,
+      foldEffectiveChanges: true,
       ignoreFromSelf: true
     }
   }

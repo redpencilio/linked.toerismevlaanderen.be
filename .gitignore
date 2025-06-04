@@ -13,6 +13,7 @@
 /data/files/*
 /data/input/*
 /data/output/*
+/data/authorization/*
 
 *-sensitive*
 

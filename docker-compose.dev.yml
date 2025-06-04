@@ -1,5 +1,3 @@
-version: '3.4'
-
 services:
   identifier:
     ports:
@@ -10,9 +8,6 @@ services:
   triplestore:
     ports:
       - "8890:8890"
-  database:
-    environment:
-      LOG_OUTGOING_SPARQL_QUERIES: "true"
   cache:
     environment:
       LOG_CACHE_KEYS: "true"
