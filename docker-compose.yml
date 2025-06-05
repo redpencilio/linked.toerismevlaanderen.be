@@ -24,7 +24,7 @@ services:
     labels:
       - "logging=true"
   frontend:
-    image: redpencil/frontend-linked.toerismevlaanderen.be:1.5.1-fastboot
+    image: redpencil/frontend-linked.toerismevlaanderen.be:1.6.0-fastboot
     links:
       - identifier:backend
     restart: always
