@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/tvladmin/linked.toerismevlaanderen.be/scripts
+cd /data/linked.toerismevlaanderen.be/scripts
 
 KEEP_NB_OF_FILES=100
 FILES_DIR=../data/files/*
