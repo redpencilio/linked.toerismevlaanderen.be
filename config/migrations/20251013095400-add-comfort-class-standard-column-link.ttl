@@ -1,0 +1,6 @@
+@prefix tvl: <http://linked.toerismevlaanderen.be/vocabularies/accessibility/>.
+
+<http://linked.toerismevlaanderen.be/id/concepts/d42a481f-e26b-442e-b3a0-1931795995e3>
+  a tvl:KeyMapping;
+  tvl:sqlKey "STANDARD";
+  tvl:linkedKey "Standard".
