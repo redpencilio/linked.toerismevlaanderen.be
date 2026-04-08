@@ -16,7 +16,7 @@ services:
     labels:
       - "logging=true"
   dispatcher:
-    image: semtech/mu-dispatcher:2.1.0-beta.2
+    image: semtech/mu-dispatcher:2.1.1
     volumes:
       - ./config/dispatcher:/config
     restart: always
@@ -126,7 +126,7 @@ services:
     labels:
       - "logging=true"
   file:
-    image: semtech/mu-file-service:3.4.0
+    image: semtech/mu-file-service:3.5.0
     volumes:
       - ./data/files:/share
     restart: always
