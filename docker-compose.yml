@@ -108,7 +108,7 @@ services:
     labels:
       - "logging=true"
   import:
-    image: redpencil/logies-data-converter-service:1.5.0
+    image: redpencil/logies-data-converter-service:1.5.1
     volumes:
       - ./data/input:/input
       - ./data/output:/output
