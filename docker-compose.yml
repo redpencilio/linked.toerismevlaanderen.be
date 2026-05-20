@@ -108,7 +108,9 @@ services:
     labels:
       - "logging=true"
   import:
-    image: redpencil/logies-data-converter-service:1.5.1
+    image: redpencil/logies-data-converter-service:feature-publication-of-deleted-products
+    environment:
+      ALLOW_MU_AUTH_SUDO: "true"
     volumes:
       - ./data/input:/input
       - ./data/output:/output
