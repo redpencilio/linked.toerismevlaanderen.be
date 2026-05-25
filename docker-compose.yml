@@ -120,7 +120,7 @@ services:
     labels:
       - "logging=true"
   dataset-generator:
-    image: redpencil/logies-dataset-generator-service:0.7.2
+    image: redpencil/logies-dataset-generator-service:0.7.3
     environment:
       ALLOW_MU_AUTH_SUDO: "true"
     volumes:
