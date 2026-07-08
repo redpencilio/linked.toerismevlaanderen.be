@@ -1,0 +1,12 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+INSERT {
+  GRAPH ?g {
+    <http://linked.toerismevlaanderen.be/id/catalogs/c62b30ce-7486-4199-a177-def7e1772a53> dcat:dataset ?dataset .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?dataset a dcat:Dataset .
+    FILTER NOT EXISTS { ?catalog dcat:dataset ?dataset . }
+  }
+}
