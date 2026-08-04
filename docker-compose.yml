@@ -108,7 +108,7 @@ services:
     labels:
       - "logging=true"
   import:
-    image: redpencil/logies-data-converter-service:1.7.1
+    image: redpencil/logies-data-converter-service:1.7.2
     environment:
       ALLOW_MU_AUTH_SUDO: "true"
     volumes:
